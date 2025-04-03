@@ -1,0 +1,141 @@
+<!-- Filter Section with Improved Alignment -->
+<div class="category-filters">
+  <div class="filter-header">
+    <h3>Filters</h3>
+    <button class="clear-filters-btn">Clear All</button>
+  </div>
+  
+  <div class="filter-group">
+    <div class="filter-title">
+      <h4>Price Range</h4>
+      <button class="filter-toggle"><i class="fas fa-chevron-down"></i></button>
+    </div>
+    <div class="filter-content">
+      <div class="price-range-slider">
+        <div class="price-inputs">
+          <div class="price-input">
+            <label for="min-price">Min</label>
+            <div class="input-wrapper">
+              <span class="currency">$</span>
+              <input type="number" id="min-price" value="0" min="0" max="500">
+            </div>
+          </div>
+          <div class="price-input">
+            <label for="max-price">Max</label>
+            <div class="input-wrapper">
+              <span class="currency">$</span>
+              <input type="number" id="max-price" value="500" min="0" max="500">
+            </div>
+          </div>
+        </div>
+        <div class="range-slider">
+          <input type="range" id="price-range-min" min="0" max="500" value="0" class="range-min">
+          <input type="range" id="price-range-max" min="0" max="500" value="500" class="range-max">
+          <div class="slider-track"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="filter-group">
+    <div class="filter-title">
+      <h4>Material</h4>
+      <button class="filter-toggle"><i class="fas fa-chevron-down"></i></button>
+    </div>
+    <div class="filter-content">
+      <div class="filter-options">
+        <div class="filter-option">
+          <input type="checkbox" id="material-gold" name="material" value="gold">
+          <label for="material-gold">Gold</label>
+          <span class="filter-count">(24)</span>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="material-silver" name="material" value="silver">
+          <label for="material-silver">Silver</label>
+          <span class="filter-count">(18)</span>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="material-rose-gold" name="material" value="rose-gold">
+          <label for="material-rose-gold">Rose Gold</label>
+          <span class="filter-count">(12)</span>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="material-brass" name="material" value="brass">
+          <label for="material-brass">Brass</label>
+          <span class="filter-count">(8)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="filter-group">
+    <div class="filter-title">
+      <h4>Gemstone</h4>
+      <button class="filter-toggle"><i class="fas fa-chevron-down"></i></button>
+    </div>
+    <div class="filter-content">
+      <div class="filter-options">
+        <div class="filter-option">
+          <input type="checkbox" id="gemstone-diamond" name="gemstone" value="diamond">
+          <label for="gemstone-diamond">Diamond</label>
+          <span class="filter-count">(15)</span>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="gemstone-pearl" name="gemstone" value="pearl">
+          <label for="gemstone-pearl">Pearl</label>
+          <span class="filter-count">(14)</span>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="gemstone-opal" name="gemstone" value="opal">
+          <label for="gemstone-opal">Opal</label>
+          <span class="filter-count">(10)</span>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="gemstone-turquoise" name="gemstone" value="turquoise">
+          <label for="gemstone-turquoise">Turquoise</label>
+          <span class="filter-count">(7)</span>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="gemstone-amethyst" name="gemstone" value="amethyst">
+          <label for="gemstone-amethyst">Amethyst</label>
+          <span class="filter-count">(6)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="filter-group">
+    <div class="filter-title">
+      <h4>Style</h4>
+      <button class="filter-toggle"><i class="fas fa-chevron-down"></i></button>
+    </div>
+    <div class="filter-content">
+      <div class="filter-options">
+        <div class="filter-option">
+          <input type="checkbox" id="style-minimalist" name="style" value="minimalist">
+          <label for="style-minimalist">Minimalist</label>
+          <span class="filter-count">(20)</span>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="style-bohemian" name="style" value="bohemian">
+          <label for="style-bohemian">Bohemian</label>
+          <span class="filter-count">(16)</span>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="style-vintage" name="style" value="vintage">
+          <label for="style-vintage">Vintage</label>
+          <span class="filter-count">(12)</span>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="style-modern" name="style" value="modern">
+          <label for="style-modern">Modern</label>
+          <span class="filter-count">(18)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="filter-actions">
+    <button class="btn btn-full">Apply Filters</button>
+  </div>
+</div>

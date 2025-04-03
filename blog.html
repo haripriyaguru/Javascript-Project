@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Artisan</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery UI for animations -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+  <!-- Header (Same as index.html) -->
+  <header class="header">
+    <div class="container">
+      <div class="header-wrapper">
+        <div class="logo">
+          <a href="index.html">Artisan</a>
+        </div>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-search">
+          <div class="search-container">
+            <input type="search" placeholder="Search for jewelry...">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        
+        <div class="header-actions">
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <a href="wishlist.html" class="header-icon">
+            <i class="fas fa-heart"></i>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="cart.html" class="header-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="badge cart-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="header-icon">
+            <i class="fas fa-user"></i>
+          </a>
+        </div>
+        
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="container">
+        <div class="mobile-search">
+          <input type="search" placeholder="Search for jewelry...">
+          <i class="fas fa-search"></i>
+        </div>
+        
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-actions">
+          <a href="wishlist.html" class="mobile-action-item">
+            <i class="fas fa-heart"></i>
+            <span>Wishlist</span>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="mobile-action-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+        
+        <button class="theme-toggle-mobile">
+          <i class="fas fa-moon"></i>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="page-header">
+        <h1>Artisan Blog</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Blog</span>
+        </div>
+      </div>
+      
+      <div class="blog-container">
+        <div class="blog-grid">
+          <div class="blog-main">
+            <!-- Featured Post -->
+            <div class="blog-featured">
+              <div class="featured-image">
+                <img src="/placeholder.svg?height=500&width=900" alt="The Art of Layering Necklaces">
+              </div>
+              <div class="featured-content">
+                <div class="post-meta">
+                  <span class="post-category">Style Guide</span>
+                  <span class="post-date">April 15, 2023</span>
+                </div>
+                <h2 class="featured-title">The Art of Layering Necklaces: A Complete Guide</h2>
+                <p class="featured-excerpt">Learn how to create the perfect layered necklace look with our comprehensive guide. From choosing the right chain lengths to mixing metals and styles, we'll show you how to elevate your jewelry game.</p>
+                <a href="blog-post.html" class="btn">Read More</a>
+              </div>
+            </div>
+            
+            <!-- Blog Posts Grid -->
+            <div class="blog-posts-grid">
+              <!-- Post 1 -->
+              <div class="blog-post-card">
+                <a href="blog-post.html" class="post-image">
+                  <img src="/placeholder.svg?height=300&width=400" alt="Gemstone Meanings">
+                </a>
+                <div class="post-content">
+                  <div class="post-meta">
+                    <span class="post-category">Gemstone Guide</span>
+                    <span class="post-date">April 8, 2023</span>
+                  </div>
+                  <h3 class="post-title"><a href="blog-post.html">The Meaning Behind Your Favorite Gemstones</a></h3>
+                  <p class="post-excerpt">Discover the history, symbolism, and healing properties associated with popular gemstones used in our jewelry collections.</p>
+                  <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+              
+              <!-- Post 2 -->
+              <div class="blog-post-card">
+                <a href="blog-post.html" class="post-image">
+                  <img src="/placeholder.svg?height=300&width=400" alt="Sustainable Jewelry">
+                </a>
+                <div class="post-content">
+                  <div class="post-meta">
+                    <span class="post-category">Sustainability</span>
+                    <span class="post-date">March 25, 2023</span>
+                  </div>
+                  <h3 class="post-title"><a href="blog-post.html">The Future of Sustainable Jewelry: Our Commitment</a></h3>
+                  <p class="post-excerpt">Learn about our journey toward more sustainable practices and how we're working to reduce our environmental footprint.</p>
+                  <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+              
+              <!-- Post 3 -->
+              <div class="blog-post-card">
+                <a href="blog-post.html" class="post-image">
+                  <img src="/placeholder.svg?height=300&width=400" alt="Spring Jewelry Trends">
+                </a>
+                <div class="post-content">
+                  <div class="post-meta">
+                    <span class="post-category">Trends</span>
+                    <span class="post-date">March 12, 2023</span>
+                  </div>
+                  <h3 class="post-title"><a href="blog-post.html">Spring 2023 Jewelry Trends You Need to Know</a></h3>
+                  <p class="post-excerpt">From bold statement pieces to delicate minimalist designs, discover the top jewelry trends for Spring 2023.</p>
+                  <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+              
+              <!-- Post 4 -->
+              <div class="blog-post-card">
+                <a href="blog-post.html" class="post-image">
+                  <img src="/placeholder.svg?height=300&width=400" alt="Jewelry Care Tips">
+                </a>
+                <div class="post-content">
+                  <div class="post-meta">
+                    <span class="post-category">Care Guide</span>
+                    <span class="post-date">February 28, 2023</span>
+                  </div>
+                  <h3 class="post-title"><a href="blog-post.html">5 Essential Jewelry Care Tips for Lasting Beauty</a></h3>
+                  <p class="post-excerpt">Learn how to keep your favorite pieces looking their best with these simple but effective jewelry care tips.</p>
+                  <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+              
+              <!-- Post 5 -->
+              <div class="blog-post-card">
+                <a href="blog-post.html" class="post-image">
+                  <img src="/placeholder.svg?height=300&width=400" alt="Artisan Interview">
+                </a>
+                <div class="post-content">
+                  <div class="post-meta">
+                    <span class="post-category">Behind the Scenes</span>
+                    <span class="post-date">February 15, 2023</span>
+                  </div>
+                  <h3 class="post-title"><a href="blog-post.html">Meet the Artisan: An Interview with Our Master Goldsmith</a></h3>
+                  <p class="post-excerpt">Get to know Sofia Rodriguez, our master goldsmith, and learn about her creative process and inspiration.</p>
+                  <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+              
+              <!-- Post 6 -->
+              <div class="blog-post-card">
+                <a href="blog-post.html" class="post-image">
+                  <img src="/placeholder.svg?height=300&width=400" alt="Wedding Jewelry">
+                </a>
+                <div class="post-content">
+                  <div class="post-meta">
+                    <span class="post-category">Bridal</span>
+                    <span class="post-date">January 30, 2023</span>
+                  </div>
+                  <h3 class="post-title"><a href="blog-post.html">The Complete Guide to Wedding Jewelry</a></h3>
+                  <p class="post-excerpt">From engagement rings to bridal party gifts, discover everything you need to know about wedding jewelry.</p>
+                  <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="blog-pagination">
+              <a href="#" class="pagination-prev disabled"><i class="fas fa-chevron-left"></i> Previous</a>
+              <div class="pagination-numbers">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <span>...</span>
+                <a href="#">8</a>
+              </div>
+              <a href="#" class="pagination-next">Next <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+          
+          <div class="blog-sidebar">
+            <!-- Search Widget -->
+            <div class="blog-widget search-widget">
+              <form class="blog-search-form">
+                <input type="search" placeholder="Search articles...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+              </form>
+            </div>
+            
+            <!-- Categories Widget -->
+            <div class="blog-widget categories-widget">
+              <h3 class="widget-title">Categories</h3>
+              <ul class="category-list">
+                <li><a href="#">Style Guide <span>(12)</span></a></li>
+                <li><a href="#">Gemstone Guide <span>(8)</span></a></li>
+                <li><a href="#">Sustainability <span>(6)</span></a></li>
+                <li><a href="#">Trends <span>(15)</span></a></li>
+                <li><a href="#">Care Guide <span>(7)</span></a></li>
+                <li><a href="#">Behind the Scenes <span>(9)</span></a></li>
+                <li><a href="#">Bridal <span>(11)</span></a></li>
+                <li><a href="#">Gift Ideas <span>(14)</span></a></li>
+              </ul>
+            </div>
+            
+            <!-- Popular Posts Widget -->
+            <div class="blog-widget popular-widget">
+              <h3 class="widget-title">Popular Posts</h3>
+              <div class="popular-posts">
+                <div class="popular-post">
+                  <a href="blog-post.html" class="popular-post-image">
+                    <img src="/placeholder.svg?height=80&width=80" alt="Engagement Ring Guide">
+                  </a>
+                  <div class="popular-post-content">
+                    <h4><a href="blog-post.html">How to Choose the Perfect Engagement Ring</a></h4>
+                    <span class="post-date">January 15, 2023</span>
+                  </div>
+                </div>
+                
+                <div class="popular-post">
+                  <a href="blog-post.html" class="popular-post-image">
+                    <img src="/placeholder.svg?height=80&width=80" alt="Birthstone Guide">
+                  </a>
+                  <div class="popular-post-content">
+                    <h4><a href="blog-post.html">The Complete Birthstone Guide: Find Your Perfect Match</a></h4>
+                    <span class="post-date">December 10, 2022</span>
+                  </div>
+                </div>
+                
+                <div class="popular-post">
+                  <a href="blog-post.html" class="popular-post-image">
+                    <img src="/placeholder.svg?height=80&width=80" alt="Jewelry Gift Guide">
+                  </a>
+                  <div class="popular-post-content">
+                    <h4><a href="blog-post.html">Holiday Gift Guide: Jewelry for Every Budget</a></h4>
+                    <span class="post-date">November 25, 2022</span>
+                  </div>
+                </div>
+                
+                <div class="popular-post">
+                  <a href="blog-post.html" class="popular-post-image">
+                    <img src="/placeholder.svg?height=80&width=80" alt="Jewelry History">
+                  </a>
+                  <div class="popular-post-content">
+                    <h4><a href="blog-post.html">The History of Jewelry: From Ancient Times to Today</a></h4>
+                    <span class="post-date">October 18, 2022</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Tags Widget -->
+            <div class="blog-widget tags-widget">
+              <h3 class="widget-title">Popular Tags</h3>
+              <div class="tag-cloud">
+                <a href="#" class="tag">Jewelry</a>
+                <a href="#" class="tag">Gemstones</a>
+                <a href="#" class="tag">Gold</a>
+                <a href="#" class="tag">Silver</a>
+                <a href="#" class="tag">Necklaces</a>
+                <a href="#" class="tag">Earrings</a>
+                <a href="#" class="tag">Rings</a>
+                <a href="#" class="tag">Bracelets</a>
+                <a href="#" class="tag">Sustainable</a>
+                <a href="#" class="tag">Handcrafted</a>
+                <a href="#" class="tag">Trends</a>
+                <a href="#" class="tag">Care</a>
+                <a href="#" class="tag">Wedding</a>
+                <a href="#" class="tag">Gifts</a>
+              </div>
+            </div>
+            
+            <!-- Newsletter Widget -->
+            <div class="blog-widget newsletter-widget">
+              <h3 class="widget-title">Subscribe to Our Blog</h3>
+              <p>Get the latest articles, style tips, and exclusive offers delivered straight to your inbox.</p>
+              <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn btn-full">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (Same as index.html) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Artisan</h3>
+          <p>Handcrafted jewelry and accessories made with love and attention to detail.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+            <li><a href="jewelry-care.html">Jewelry Care</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Artisan Jewelry. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="fas fa-check-circle toast-icon"></i>
+      <div class="toast-message">
+        <h4 class="toast-title">Success</h4>
+        <p class="toast-description">Item added to cart</p>
+      </div>
+    </div>
+    <button class="toast-close"><i class="fas fa-times"></i></button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Blog search form submission
+      $('.blog-search-form').on('submit', function(e) {
+        e.preventDefault();
+        const searchTerm = $(this).find('input[type="search"]').val().trim();
+        
+        if (searchTerm) {
+          // In a real implementation, this would redirect to search results
+          // For demo purposes, just show a message
+          showToast('Search', `Searching for: ${searchTerm}`);
+        }
+      });
+      
+      // Newsletter form submission
+      $('.newsletter-form').on('submit', function(e) {
+        e.preventDefault();
+        
+        // Simulate form submission
+        const email = $(this).find('input[type="email"]').val();
+        const submitBtn = $(this).find('button[type="submit"]');
+        
+        submitBtn.html('<i class="fas fa-spinner fa-spin"></i>').prop('disabled', true);
+        
+        setTimeout(function() {
+          submitBtn.html('Subscribe').prop('disabled', false);
+          
+          // Show success message
+          showToast('Subscribed', 'Thank you for subscribing to our blog!');
+          
+          // Reset form
+          $('.newsletter-form')[0].reset();
+        }, 1500);
+      });
+    });
+  </script>
+</body>
+</html>

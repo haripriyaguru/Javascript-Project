@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - Artisan</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery UI for animations -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+  <!-- Header (Same as index.html) -->
+  <header class="header">
+    <div class="container">
+      <div class="header-wrapper">
+        <div class="logo">
+          <a href="index.html">Artisan</a>
+        </div>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-search">
+          <div class="search-container">
+            <input type="search" placeholder="Search for jewelry...">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        
+        <div class="header-actions">
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <a href="wishlist.html" class="header-icon">
+            <i class="fas fa-heart"></i>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="cart.html" class="header-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="badge cart-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="header-icon active">
+            <i class="fas fa-user"></i>
+          </a>
+        </div>
+        
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="container">
+        <div class="mobile-search">
+          <input type="search" placeholder="Search for jewelry...">
+          <i class="fas fa-search"></i>
+        </div>
+        
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-actions">
+          <a href="wishlist.html" class="mobile-action-item">
+            <i class="fas fa-heart"></i>
+            <span>Wishlist</span>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="mobile-action-item active">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+        
+        <button class="theme-toggle-mobile">
+          <i class="fas fa-moon"></i>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="page-header">
+        <h1>My Account</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>My Account</span>
+        </div>
+      </div>
+      
+      <div class="profile-container">
+        <div class="profile-sidebar">
+          <div class="profile-user">
+            <div class="profile-avatar">
+              <img src="images/profile-avatar.jpg" alt="User Avatar">
+              <button class="avatar-edit-btn">
+                <i class="fas fa-camera"></i>
+              </button>
+            </div>
+            <div class="profile-user-info">
+              <h3>Sarah Johnson</h3>
+              <p>sarah.j@example.com</p>
+              <div class="profile-stats">
+                <div class="stat-item">
+                  <span class="stat-value">12</span>
+                  <span class="stat-label">Orders</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-value">8</span>
+                  <span class="stat-label">Wishlist</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-value">4.8</span>
+                  <span class="stat-label">Rating</span>
+                </div>
+              </div>
+              <p class="member-since">Member since March 2023</p>
+            </div>
+          </div>
+          
+          <nav class="profile-nav">
+            <ul>
+              <li class="active">
+                <a href="#dashboard" data-section="dashboard">
+                  <i class="fas fa-gem"></i>
+                  <span>My Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a href="#orders" data-section="orders">
+                  <i class="fas fa-shopping-bag"></i>
+                  <span>My Orders</span>
+                </a>
+              </li>
+              <li>
+                <a href="#wishlist" data-section="wishlist">
+                  <i class="fas fa-heart"></i>
+                  <span>My Wishlist</span>
+                </a>
+              </li>
+              <li>
+                <a href="#addresses" data-section="addresses">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Shipping Addresses</span>
+                </a>
+              </li>
+              <li>
+                <a href="#payment-methods" data-section="payment-methods">
+                  <i class="fas fa-credit-card"></i>
+                  <span>Payment Methods</span>
+                </a>
+              </li>
+              <li>
+                <a href="#jewelry-care" data-section="jewelry-care">
+                  <i class="fas fa-spa"></i>
+                  <span>Jewelry Care Guide</span>
+                </a>
+              </li>
+              <li>
+                <a href="#account-details" data-section="account-details">
+                  <i class="fas fa-user-edit"></i>
+                  <span>Account Settings</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" id="logout-btn">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span>Logout</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="profile-content">
+          <!-- Dashboard Section -->
+          <div class="profile-section active" id="dashboard-section">
+            <div class="dashboard-welcome">
+              <h2>Welcome back, <strong>Sarah</strong>!</h2>
+              <p>Track your orders, manage your wishlist, and keep your jewelry collection organized.</p>
+            </div>
+            
+            <div class="dashboard-cards">
+              <div class="dashboard-card">
+                <div class="card-icon">
+                  <i class="fas fa-shopping-bag"></i>
+                </div>
+                <div class="card-content">
+                  <h3>Recent Orders</h3>
+                  <p>2 orders pending delivery</p>
+                  <div class="order-status">
+                    <span class="status-badge processing">Processing</span>
+                    <span class="status-badge shipped">Shipped</span>
+                  </div>
+                </div>
+                <a href="#orders" class="card-link" data-section="orders">View All Orders</a>
+              </div>
+              
+              <div class="dashboard-card">
+                <div class="card-icon">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <div class="card-content">
+                  <h3>Wishlist</h3>
+                  <p>8 items in your wishlist</p>
+                  <div class="wishlist-preview">
+                    <img src="images/ring.jpg" alt="Ring">
+                    <img src="images/necklace.jpg" alt="Necklace">
+                    <img src="images/earing.jpg" alt="Earrings">
+                  </div>
+                </div>
+                <a href="#wishlist" class="card-link" data-section="wishlist">View Wishlist</a>
+              </div>
+              
+              <div class="dashboard-card">
+                <div class="card-icon">
+                  <i class="fas fa-gift"></i>
+                </div>
+                <div class="card-content">
+                  <h3>Rewards & Points</h3>
+                  <p>You have 250 points</p>
+                  <div class="points-progress">
+                    <div class="progress-bar" style="width: 25%"></div>
+                  </div>
+                  <p class="points-hint">Earn 750 more points for a $10 discount!</p>
+                </div>
+                <a href="#" class="card-link">View Rewards</a>
+              </div>
+              
+              <div class="dashboard-card">
+                <div class="card-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="card-content">
+                  <h3>Reviews & Ratings</h3>
+                  <p>Your average rating: 4.8/5</p>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <p>3 reviews pending</p>
+                </div>
+                <a href="#" class="card-link">View Reviews</a>
+              </div>
+            </div>
+            
+            <div class="dashboard-recommendations">
+              <h3>Recommended for You</h3>
+              <div class="recommendations-grid">
+                <div class="product-card">
+                  <div class="product-image">
+                    <img src="images/bracelet.webp" alt="Gold Bracelet">
+                    <button class="wishlist-btn"><i class="fas fa-heart"></i></button>
+                  </div>
+                  <div class="product-info">
+                    <h4>Gold Plated Bracelet</h4>
+                    <p class="price">$49.99</p>
+                    <button class="btn btn-sm">Add to Cart</button>
+                  </div>
+                </div>
+                <!-- Add more product cards -->
+              </div>
+            </div>
+          </div>
+          
+          <!-- Orders Section -->
+          <div class="profile-section" id="orders-section">
+            <h2>My Orders</h2>
+            
+            <div class="orders-filter">
+              <div class="filter-row">
+                <div class="filter-group">
+                  <label for="order-status">Status</label>
+                  <select id="order-status">
+                    <option value="all">All</option>
+                    <option value="processing">Processing</option>
+                    <option value="shipped">Shipped</option>
+                    <option value="delivered">Delivered</option>
+                    <option value="cancelled">Cancelled</option>
+                  </select>
+                </div>
+                
+                <div class="filter-group">
+                  <label for="order-date">Date Range</label>
+                  <select id="order-date">
+                    <option value="all">All Time</option>
+                    <option value="last-month">Last Month</option>
+                    <option value="last-3-months">Last 3 Months</option>
+                    <option value="last-6-months">Last 6 Months</option>
+                    <option value="last-year">Last Year</option>
+                  </select>
+                </div>
+                
+                <div class="filter-actions">
+                  <button class="btn btn-sm">Apply Filters</button>
+                  <button class="btn btn-sm btn-outline">Reset</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="table-responsive">
+              <table class="orders-table">
+                <thead>
+                  <tr>
+                    <th>Order</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>#ART12345</td>
+                    <td>April 15, 2023</td>
+                    <td><span class="order-status shipped">Shipped</span></td>
+                    <td>$124.79</td>
+                    <td>
+                      <div class="action-buttons">
+                        <a href="#" class="btn btn-sm">View</a>
+                        <a href="track-order.html" class="btn btn-sm btn-outline">Track</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#ART12344</td>
+                    <td>March 28, 2023</td>
+                    <td><span class="order-status delivered">Delivered</span></td>
+                    <td>$89.50</td>
+                    <td>
+                      <div class="action-buttons">
+                        <a href="#" class="btn btn-sm">View</a>
+                        <a href="#" class="btn btn-sm btn-outline">Review</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#ART12343</td>
+                    <td>February 10, 2023</td>
+                    <td><span class="order-status delivered">Delivered</span></td>
+                    <td>$156.25</td>
+                    <td>
+                      <div class="action-buttons">
+                        <a href="#" class="btn btn-sm">View</a>
+                        <a href="#" class="btn btn-sm btn-outline">Review</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#ART12342</td>
+                    <td>January 5, 2023</td>
+                    <td><span class="order-status delivered">Delivered</span></td>
+                    <td>$78.99</td>
+                    <td>
+                      <div class="action-buttons">
+                        <a href="#" class="btn btn-sm">View</a>
+                        <a href="#" class="btn btn-sm btn-outline">Review</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#ART12341</td>
+                    <td>December 18, 2022</td>
+                    <td><span class="order-status delivered">Delivered</span></td>
+                    <td>$112.50</td>
+                    <td>
+                      <div class="action-buttons">
+                        <a href="#" class="btn btn-sm">View</a>
+                        <a href="#" class="btn btn-sm btn-outline">Review</a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div class="pagination">
+              <a href="#" class="pagination-prev disabled"><i class="fas fa-chevron-left"></i> Previous</a>
+              <div class="pagination-numbers">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+              </div>
+              <a href="#" class="pagination-next">Next <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- Addresses Section -->
+          <div class="profile-section" id="addresses-section">
+            <h2>My Addresses</h2>
+            
+            <div class="addresses-grid">
+              <div class="address-card">
+                <div class="address-card-header">
+                  <h3>Shipping Address</h3>
+                  <span class="address-badge default">Default</span>
+                </div>
+                <div class="address-card-body">
+                  <p><strong>Jane Smith</strong></p>
+                  <p>123 Main Street, Apt 4B</p>
+                  <p>New York, NY 10001</p>
+                  <p>United States</p>
+                  <p>Phone: (555) 123-4567</p>
+                </div>
+                <div class="address-card-actions">
+                  <button class="btn btn-sm">Edit</button>
+                  <button class="btn btn-sm btn-outline">Delete</button>
+                </div>
+              </div>
+              
+              <div class="address-card">
+                <div class="address-card-header">
+                  <h3>Billing Address</h3>
+                </div>
+                <div class="address-card-body">
+                  <p><strong>Jane Smith</strong></p>
+                  <p>456 Park Avenue, Suite 789</p>
+                  <p>New York, NY 10022</p>
+                  <p>United States</p>
+                  <p>Phone: (555) 987-6543</p>
+                </div>
+                <div class="address-card-actions">
+                  <button class="btn btn-sm">Edit</button>
+                  <button class="btn btn-sm btn-outline">Delete</button>
+                  <button class="btn btn-sm btn-text">Set as Default</button>
+                </div>
+              </div>
+              
+              <div class="address-card add-address-card">
+                <div class="add-address-content">
+                  <div class="add-icon">
+                    <i class="fas fa-plus"></i>
+                  </div>
+                  <p>Add a New Address</p>
+                  <button class="btn">Add Address</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Payment Methods Section -->
+          <div class="profile-section" id="payment-methods-section">
+            <h2>Payment Methods</h2>
+            
+            <div class="payment-methods-grid">
+              <div class="payment-card">
+                <div class="payment-card-header">
+                  <div class="card-icon">
+                    <i class="fab fa-cc-visa"></i>
+                  </div>
+                  <span class="payment-badge default">Default</span>
+                </div>
+                <div class="payment-card-body">
+                  <p class="card-number">•••• •••• •••• 4242</p>
+                  <div class="card-details">
+                    <p class="card-name">Jane Smith</p>
+                    <p class="card-expiry">Expires 12/25</p>
+                  </div>
+                </div>
+                <div class="payment-card-actions">
+                  <button class="btn btn-sm">Edit</button>
+                  <button class="btn btn-sm btn-outline">Delete</button>
+                </div>
+              </div>
+              
+              <div class="payment-card add-payment-card">
+                <div class="add-payment-content">
+                  <div class="add-icon">
+                    <i class="fas fa-plus"></i>
+                  </div>
+                  <p>Add a New Payment Method</p>
+                  <button class="btn">Add Payment Method</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Account Details Section -->
+          <div class="profile-section" id="account-details-section">
+            <h2>Account Details</h2>
+            
+            <form id="account-details-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="account-first-name">First Name</label>
+                  <input type="text" id="account-first-name" name="account-first-name" value="Jane" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="account-last-name">Last Name</label>
+                  <input type="text" id="account-last-name" name="account-last-name" value="Smith" required>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="account-display-name">Display Name</label>
+                <input type="text" id="account-display-name" name="account-display-name" value="Jane Smith">
+                <p class="form-hint">This will be how your name appears in the account section and in reviews.</p>
+              </div>
+              
+              <div class="form-group">
+                <label for="account-email">Email Address</label>
+                <input type="email" id="account-email" name="account-email" value="jane.smith@example.com" required>
+              </div>
+              
+              <h3>Password Change</h3>
+              
+              <div class="form-group">
+                <label for="current-password">Current Password (leave blank to leave unchanged)</label>
+                <div class="password-input">
+                  <input type="password" id="current-password" name="current-password">
+                  <button type="button" class="password-toggle">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="new-password">New Password (leave blank to leave unchanged)</label>
+                <div class="password-input">
+                  <input type="password" id="new-password" name="new-password">
+                  <button type="button" class="password-toggle">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="confirm-new-password">Confirm New Password</label>
+                <div class="password-input">
+                  <input type="password" id="confirm-new-password" name="confirm-new-password">
+                  <button type="button" class="password-toggle">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              
+              <div class="form-actions">
+                <button type="submit" class="btn">Save Changes</button>
+              </div>
+            </form>
+          </div>
+          
+          <!-- Wishlist Section -->
+          <div class="profile-section" id="wishlist-section">
+            <h2>My Wishlist</h2>
+            
+            <div class="wishlist-grid">
+              <div class="wishlist-item">
+                <div class="wishlist-item-image">
+                  <img src="/placeholder.svg?height=200&width=200" alt="Gold Hoop Earrings">
+                  <button class="remove-wishlist-btn">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+                <div class="wishlist-item-content">
+                  <h3>Gold Hoop Earrings</h3>
+                  <p class="wishlist-item-price">$45.00</p>
+                  <div class="wishlist-item-actions">
+                    <button class="btn btn-sm">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="wishlist-item">
+                <div class="wishlist-item-image">
+                  <img src="/placeholder.svg?height=200&width=200" alt="Pearl Pendant Necklace">
+                  <button class="remove-wishlist-btn">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+                <div class="wishlist-item-content">
+                  <h3>Pearl Pendant Necklace</h3>
+                  <p class="wishlist-item-price">$65.00</p>
+                  <div class="wishlist-item-actions">
+                    <button class="btn btn-sm">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="wishlist-item">
+                <div class="wishlist-item-image">
+                  <img src="/placeholder.svg?height=200&width=200" alt="Silver Bracelet">
+                  <button class="remove-wishlist-btn">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+                <div class="wishlist-item-content">
+                  <h3>Silver Bracelet</h3>
+                  <p class="wishlist-item-price">$55.00</p>
+                  <div class="wishlist-item-actions">
+                    <button class="btn btn-sm">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="wishlist-item">
+                <div class="wishlist-item-image">
+                  <img src="/placeholder.svg?height=200&width=200" alt="Gemstone Ring">
+                  <button class="remove-wishlist-btn">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+                <div class="wishlist-item-content">
+                  <h3>Gemstone Ring</h3>
+                  <p class="wishlist-item-price">$75.00</p>
+                  <div class="wishlist-item-actions">
+                    <button class="btn btn-sm">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="wishlist-item">
+                <div class="wishlist-item-image">
+                  <img src="/placeholder.svg?height=200&width=200" alt="Hair Pin Set">
+                  <button class="remove-wishlist-btn">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+                <div class="wishlist-item-content">
+                  <h3>Hair Pin Set</h3>
+                  <p class="wishlist-item-price">$35.00</p>
+                  <div class="wishlist-item-actions">
+                    <button class="btn btn-sm">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (Same as index.html) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Artisan</h3>
+          <p>Handcrafted jewelry and accessories made with love and attention to detail.</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+            <li><a href="jewelry-care.html">Jewelry Care</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Artisan Jewelry. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="fas fa-check-circle toast-icon"></i>
+      <div class="toast-message">
+        <h4 class="toast-title">Success</h4>
+        <p class="toast-description">Item added to cart</p>
+      </div>
+    </div>
+    <button class="toast-close"><i class="fas fa-times"></i></button>
+  </div>
+
+  <!-- Logout Confirmation Modal -->
+  <div class="modal" id="logout-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Confirm Logout</h2>
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to log out of your account?</p>
+        <div class="modal-actions">
+          <button class="btn btn-outline" id="cancel-logout">Cancel</button>
+          <button class="btn" id="confirm-logout">Logout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Profile navigation
+      $('.profile-nav a[data-section]').on('click', function(e) {
+        e.preventDefault();
+        
+        const section = $(this).data('section');
+        
+        // Update active nav item
+        $('.profile-nav li').removeClass('active');
+        $(this).parent('li').addClass('active');
+        
+        // Show corresponding section
+        $('.profile-section').removeClass('active');
+        $(`#${section}-section`).addClass('active');
+        
+        // Update URL hash
+        window.location.hash = section;
+      });
+      
+      // Dashboard card links
+      $('.card-link[data-section]').on('click', function(e) {
+        e.preventDefault();
+        
+        const section = $(this).data('section');
+        
+        // Trigger click on corresponding nav item
+        $(`.profile-nav a[data-section="${section}"]`).click();
+      });
+      
+      // Check URL hash on page load
+      if (window.location.hash) {
+        const section = window.location.hash.substring(1);
+        $(`.profile-nav a[data-section="${section}"]`).click();
+      }
+
+      // Handle direct section access via URL
+      function handleSectionAccess() {
+        const hash = window.location.hash.substring(1);
+        if (hash) {
+          $(`.profile-nav a[data-section="${hash}"]`).click();
+        }
+      }
+
+      // Listen for hash changes
+      $(window).on('hashchange', handleSectionAccess);
+      
+      // Password visibility toggle
+      $('.password-toggle').on('click', function() {
+        const passwordInput = $(this).siblings('input');
+        const icon = $(this).find('i');
+        
+        if (passwordInput.attr('type') === 'password') {
+          passwordInput.attr('type', 'text');
+          icon.removeClass('fa-eye').addClass('fa-eye-slash');
+        } else {
+          passwordInput.attr('type', 'password');
+          icon.removeClass('fa-eye-slash').addClass('fa-eye');
+        }
+      });
+      
+      // Account details form submission
+      $('#account-details-form').on('submit', function(e) {
+        e.preventDefault();
+        
+        // Simulate form validation and submission
+        const submitBtn = $(this).find('button[type="submit"]');
+        submitBtn.html('<i class="fas fa-spinner fa-spin"></i> Saving...').prop('disabled', true);
+        
+        setTimeout(function() {
+          submitBtn.html('Save Changes').prop('disabled', false);
+          
+          // Show success message
+          showToast('Success', 'Your account details have been updated successfully.');
+        }, 1500);
+      });
+      
+      // Wishlist item removal
+      $('.remove-wishlist-btn').on('click', function() {
+        const wishlistItem = $(this).closest('.wishlist-item');
+        
+        // Animate removal
+        wishlistItem.fadeOut(300, function() {
+          $(this).remove();
+          
+          // Check if wishlist is empty
+          if ($('.wishlist-item').length === 0) {
+            $('#wishlist-section').append('<div class="empty-state"><i class="far fa-heart"></i><p>Your wishlist is empty.</p><a href="index.html" class="btn">Shop Now</a></div>');
+          }
+        });
+        
+        // Show success message
+        showToast('Success', 'Item removed from wishlist.');
+      });
+      
+      // Add to cart from wishlist
+      $('.wishlist-item-actions .btn').on('click', function() {
+        const itemName = $(this).closest('.wishlist-item').find('h3').text();
+        
+        // Show success message
+        showToast('Success', `${itemName} added to cart.`);
+        
+        // Update cart count
+        const currentCount = parseInt($('.cart-count').text());
+        $('.cart-count').text(currentCount + 1);
+      });
+      
+      // Logout functionality
+      $('#logout-btn').on('click', function(e) {
+        e.preventDefault();
+        
+        // Show logout confirmation modal
+        $('#logout-modal').fadeIn(300);
+        $('body').addClass('modal-open');
+      });
+      
+      // Cancel logout
+      $('#cancel-logout, .modal-close').on('click', function() {
+        $('#logout-modal').fadeOut(300);
+        $('body').removeClass('modal-open');
+      });
+      
+      // Confirm logout
+      $('#confirm-logout').on('click', function() {
+        // Simulate logout process
+        $(this).html('<i class="fas fa-spinner fa-spin"></i> Logging out...').prop('disabled', true);
+        
+        setTimeout(function() {
+          // Redirect to home page after logout
+          window.location.href = 'index.html';
+        }, 1500);
+      });
+      
+      // Close modal when clicking outside
+      $(window).on('click', function(e) {
+        if ($(e.target).hasClass('modal')) {
+          $('#logout-modal').fadeOut(300);
+          $('body').removeClass('modal-open');
+        }
+      });
+
+      // Handle direct section access on page load
+      handleSectionAccess();
+    });
+  </script>
+
+  <!-- Add CSS for new styles -->
+  <style>
+    .profile-stats {
+      display: flex;
+      gap: 20px;
+      margin: 15px 0;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-value {
+      display: block;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .stat-label {
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .order-status {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .status-badge {
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 0.8em;
+    }
+
+    .status-badge.processing {
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    .status-badge.shipped {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .wishlist-preview {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .wishlist-preview img {
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    .points-progress {
+      height: 6px;
+      background: #eee;
+      border-radius: 3px;
+      margin: 10px 0;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: #ffd700;
+      border-radius: 3px;
+    }
+
+    .points-hint {
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .rating-stars {
+      color: #ffd700;
+      margin: 5px 0;
+    }
+
+    .recommendations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .product-card {
+      border: 1px solid #eee;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .product-image {
+      position: relative;
+      padding-top: 100%;
+    }
+
+    .product-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .wishlist-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: white;
+      border: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .product-info {
+      padding: 15px;
+    }
+
+    .product-info h4 {
+      margin: 0 0 5px;
+      font-size: 1em;
+    }
+
+    .price {
+      color: #e44d26;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+  </style>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - Artisan</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery UI for animations -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+  <!-- Header (Same as index.html) -->
+  <header class="header">
+    <!-- Header content (same as index.html) -->
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="breadcrumb" id="product-breadcrumb">
+        <!-- Breadcrumb will be loaded dynamically -->
+      </div>
+      
+      <div class="product-detail" id="product-detail">
+        <!-- Product details will be loaded dynamically -->
+      </div>
+      
+      <div class="product-tabs">
+        <div class="tabs-header">
+          <button class="tab-btn active" data-tab="details">Product Details</button>
+          <button class="tab-btn" data-tab="care">Care Instructions</button>
+          <button class="tab-btn" data-tab="reviews" id="reviews-tab">Reviews</button>
+        </div>
+        
+        <div class="tabs-content">
+          <div class="tab-panel active" id="details-panel">
+            <!-- Product details tab content will be loaded dynamically -->
+          </div>
+          
+          <div class="tab-panel" id="care-panel">
+            <!-- Care instructions tab content will be loaded dynamically -->
+          </div>
+          
+          <div class="tab-panel" id="reviews-panel">
+            <!-- Reviews tab content will be loaded dynamically -->
+          </div>
+        </div>
+      </div>
+      
+      <section class="related-products">
+        <h2>You May Also Like</h2>
+        <div class="product-grid" id="related-products-grid">
+          <!-- Related products will be loaded dynamically -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer (Same as index.html) -->
+  <footer class="footer">
+    <!-- Footer content (same as index.html) -->
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="fas fa-check-circle toast-icon"></i>
+      <div class="toast-message">
+        <h4 class="toast-title">Success</h4>
+        <p class="toast-description">Item added to cart</p>
+      </div>
+    </div>
+    <button class="toast-close"><i class="fas fa-times"></i></button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

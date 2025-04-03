@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Artisan</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery UI for animations -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+  <!-- Header (Same as index.html) -->
+  <header class="header">
+    <!-- Header content (same as index.html) -->
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <h1>Checkout</h1>
+      
+      <div class="checkout-container">
+        <div class="checkout-main">
+          <form id="checkout-form">
+            <!-- Contact Information -->
+            <div class="checkout-section">
+              <h2>Contact Information</h2>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="checkout-first-name">First Name</label>
+                  <input type="text" id="checkout-first-name" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="checkout-last-name">Last Name</label>
+                  <input type="text" id="checkout-last-name" required>
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="checkout-email">Email</label>
+                  <input type="email" id="checkout-email" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="checkout-phone">Phone</label>
+                  <input type="tel" id="checkout-phone" required>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Shipping Address -->
+            <div class="checkout-section">
+              <h2>Shipping Address</h2>
+              <div class="form-group">
+                <label for="checkout-address">Street Address</label>
+                <input type="text" id="checkout-address" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="checkout-address2">Apartment, suite, etc. (optional)</label>
+                <input type="text" id="checkout-address2">
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="checkout-city">City</label>
+                  <input type="text" id="checkout-city" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="checkout-state">State</label>
+                  <select id="checkout-state" required>
+                    <option value="">Select state</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="NY">New York</option>
+                    <option value="TX">Texas</option>
+                    <option value="WA">Washington</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="checkout-zip">ZIP Code</label>
+                  <input type="text" id="checkout-zip" required>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Payment Method -->
+            <div class="checkout-section">
+              <h2>Payment Method</h2>
+              <div class="payment-tabs">
+                <button type="button" class="payment-tab active" data-payment="card">Credit Card</button>
+                <button type="button" class="payment-tab" data-payment="paypal">PayPal</button>
+                <button type="button" class="payment-tab" data-payment="upi">UPI</button>
+              </div>
+              
+              <div class="payment-panels">
+                <!-- Credit Card Panel -->
+                <div class="payment-panel active" id="card-panel">
+                  <div class="form-group">
+                    <label for="card-name">Name on Card</label>
+                    <input type="text" id="card-name" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <div class="input-icon">
+                      <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                      <i class="fas fa-credit-card"></i>
+                    </div>
+                  </div>
+                  
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="card-expiry">Expiry Date</label>
+                      <input type="text" id="card-expiry" placeholder="MM/YY" required>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="card-cvc">CVC</label>
+                      <input type="text" id="card-cvc" placeholder="123" required>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- PayPal Panel -->
+                <div class="payment-panel" id="paypal-panel">
+                  <div class="payment-info">
+                    <p>You will be redirected to PayPal to complete your payment.</p>
+                    <button type="button" class="btn">Continue with PayPal</button>
+                  </div>
+                </div>
+                
+                <!-- UPI Panel -->
+                <div class="payment-panel" id="upi-panel">
+                  <div class="form-group">
+                    <label for="upi-id">UPI ID</label>
+                    <input type="text" id="upi-id" placeholder="name@upi" required>
+                  </div>
+                  
+                  <button type="button" class="btn">Verify UPI ID</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Shipping Method -->
+            <div class="checkout-section">
+              <h2>Shipping Method</h2>
+              <div class="shipping-options">
+                <div class="shipping-option">
+                  <input type="radio" name="shipping" id="standard-shipping" value="standard" checked>
+                  <label for="standard-shipping">
+                    <div class="shipping-option-info">
+                      <div class="shipping-option-title">Standard Shipping</div>
+                      <div class="shipping-option-desc">3-5 business days</div>
+                    </div>
+                    <div class="shipping-option-price" id="standard-shipping-price">Free</div>
+                  </label>
+                </div>
+                
+                <div class="shipping-option">
+                  <input type="radio" name="shipping" id="express-shipping" value="express">
+                  <label for="express-shipping">
+                    <div class="shipping-option-info">
+                      <div class="shipping-option-title">Express Shipping</div>
+                      <div class="shipping-option-desc">1-2 business days</div>
+                    </div>
+                    <div class="shipping-option-price">$12.99</div>
+                  </label>
+                </div>
+                
+                <div class="shipping-option">
+                  <input type="radio" name="shipping" id="overnight-shipping" value="overnight">
+                  <label for="overnight-shipping">
+                    <div class="shipping-option-info">
+                      <div class="shipping-option-title">Overnight Shipping</div>
+                      <div class="shipping-option-desc">Next business day</div>
+                    </div>
+                    <div class="shipping-option-price">$24.99</div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        
+        <div class="checkout-sidebar">
+          <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="order-items" id="checkout-items">
+              <!-- Order items will be loaded dynamically -->
+            </div>
+            
+            <div class="order-totals">
+              <div class="order-total-row">
+                <span>Subtotal</span>
+                <span id="checkout-subtotal">$0.00</span>
+              </div>
+              
+              <div class="order-total-row" id="discount-row" style="display: none;">
+                <span>Discount</span>
+                <span id="checkout-discount">-$0.00</span>
+              </div>
+              
+              <div class="order-total-row">
+                <span>Shipping</span>
+                <span id="checkout-shipping">Free</span>
+              </div>
+              
+              <div class="order-total-row">
+                <span>Tax</span>
+                <span id="checkout-tax">$0.00</span>
+              </div>
+              
+              <div class="order-total-row total">
+                <span>Total</span>
+                <span id="checkout-total">$0.00</span>
+              </div>
+            </div>
+            
+            <div class="coupon-section">
+              <div class="form-row">
+                <input type="text" id="coupon-code" placeholder="Coupon code">
+                <button type="button" id="apply-coupon" class="btn btn-outline">Apply</button>
+              </div>
+              <div class="coupon-hint">Try these codes: DISCOUNT20, SAVE10</div>
+            </div>
+            
+            <button type="button" href="order-summary.html" id="place-order-btn" class="btn btn-full">Place Order</button>
+            
+            <div class="secure-checkout">
+              <i class="fas fa-shield-alt"></i>
+              <span>Secure checkout</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (Same as index.html) -->
+  <footer class="footer">
+    <!-- Footer content (same as index.html) -->
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="fas fa-check-circle toast-icon"></i>
+      <div class="toast-message">
+        <h4 class="toast-title">Success</h4>
+        <p class="toast-description">Item added to cart</p>
+      </div>
+    </div>
+    <button class="toast-close"><i class="fas fa-times"></i></button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

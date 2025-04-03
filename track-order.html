@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Order - Artisan</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery UI for animations -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+  <!-- Header (Same as index.html) -->
+  <header class="header">
+    <!-- Header content (same as index.html) -->
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <h1>Track Your Order</h1>
+      
+      <div class="track-order-container">
+        <div class="track-order-form-card">
+          <div class="track-order-card-header">
+            <h2>Enter Order Details</h2>
+            <p>Enter your order number to track your package</p>
+          </div>
+          
+          <form id="track-order-form" class="track-order-form">
+            <div class="form-group">
+              <label for="order-number-input">Order Number</label>
+              <div class="form-row">
+                <input type="text" id="order-number-input" placeholder="e.g. 123456" required>
+                <button type="submit" class="btn">Track</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        
+        <div class="order-tracking-results" id="tracking-results" style="display: none;">
+          <div class="tracking-card">
+            <div class="tracking-card-header">
+              <h2>Order #<span id="tracking-order-number">123456</span></h2>
+              <p>Estimated delivery: <span id="tracking-delivery-date">April 2, 2025</span></p>
+            </div>
+            
+            <div class="tracking-card-content">
+              <div class="tracking-timeline">
+                <div class="tracking-timeline-line">
+                  <div class="tracking-timeline-progress" id="tracking-progress"></div>
+                </div>
+                
+                <div class="tracking-steps">
+                  <div class="tracking-step" data-step="1">
+                    <div class="tracking-step-icon">
+                      <i class="fas fa-check"></i>
+                    </div>
+                    <div class="tracking-step-content">
+                      <div class="tracking-step-title">Order Confirmed</div>
+                      <div class="tracking-step-date">Mar 28, 2025</div>
+                      <div class="tracking-step-desc">Your order has been confirmed and is being processed.</div>
+                    </div>
+                  </div>
+                  
+                  <div class="tracking-step" data-step="2">
+                    <div class="tracking-step-icon">
+                      <i class="fas fa-box"></i>
+                    </div>
+                    <div class="tracking-step-content">
+                      <div class="tracking-step-title">Order Packed</div>
+                      <div class="tracking-step-date">Mar 29, 2025</div>
+                      <div class="tracking-step-desc">Your items have been packed and are ready for shipping.</div>
+                    </div>
+                  </div>
+                  
+                  <div class="tracking-step" data-step="3">
+                    <div class="tracking-step-icon">
+                      <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="tracking-step-content">
+                      <div class="tracking-step-title">Order Shipped</div>
+                      <div class="tracking-step-date">Mar 30, 2025</div>
+                      <div class="tracking-step-desc">Your order is on its way to you.</div>
+                    </div>
+                  </div>
+                  
+                  <div class="tracking-step" data-step="4">
+                    <div class="tracking-step-icon">
+                      <i class="fas fa-truck-loading"></i>
+                    </div>
+                    <div class="tracking-step-content">
+                      <div class="tracking-step-title">Out for Delivery</div>
+                      <div class="tracking-step-date">Apr 2, 2025</div>
+                      <div class="tracking-step-desc">Your order will be delivered today.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="tracking-actions">
+                <a href="index.html" class="btn btn-outline">Continue Shopping</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (Same as index.html) -->
+  <footer class="footer">
+    <!-- Footer content (same as index.html) -->
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/track-order.js"></script>
+</body>
+</html>

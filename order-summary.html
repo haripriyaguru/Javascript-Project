@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Summary - Artisan</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery UI for animations -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+  <!-- Header (Same as index.html) -->
+  <header class="header">
+    <div class="container">
+      <div class="header-wrapper">
+        <div class="logo">
+          <a href="index.html">Artisan</a>
+        </div>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-search">
+          <div class="search-container">
+            <input type="search" placeholder="Search for jewelry...">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        
+        <div class="header-actions">
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <a href="wishlist.html" class="header-icon">
+            <i class="fas fa-heart"></i>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="cart.html" class="header-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="badge cart-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="header-icon">
+            <i class="fas fa-user"></i>
+          </a>
+        </div>
+        
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="container">
+        <div class="mobile-search">
+          <input type="search" placeholder="Search for jewelry...">
+          <i class="fas fa-search"></i>
+        </div>
+        
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-actions">
+          <a href="wishlist.html" class="mobile-action-item">
+            <i class="fas fa-heart"></i>
+            <span>Wishlist</span>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="mobile-action-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+        
+        <button class="theme-toggle-mobile">
+          <i class="fas fa-moon"></i>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="order-summary-page">
+        <div class="order-success">
+          <i class="fas fa-check-circle"></i>
+          <h1>Thank You for Your Order!</h1>
+          <p>Your order has been successfully placed. We'll send you an email confirmation shortly.</p>
+        </div>
+        
+        <div class="order-details">
+          <h2>Order Details</h2>
+          <div class="order-info">
+            <div class="order-number">
+              <span>Order Number:</span>
+              <span id="order-number"></span>
+                </div>
+            <div class="order-date">
+              <span>Order Date:</span>
+              <span id="order-date"></span>
+            </div>
+          </div>
+          
+          <div class="order-items" id="order-items">
+            <!-- Order items will be loaded dynamically -->
+          </div>
+              
+              <div class="order-totals">
+            <div class="order-total-row">
+                  <span>Subtotal</span>
+              <span id="order-subtotal"></span>
+            </div>
+            <div class="order-total-row" id="order-discount-row" style="display: none;">
+              <span>Discount</span>
+              <span id="order-discount"></span>
+                </div>
+            <div class="order-total-row">
+                  <span>Shipping</span>
+              <span id="order-shipping"></span>
+                </div>
+            <div class="order-total-row">
+              <span>Tax</span>
+              <span id="order-tax"></span>
+                </div>
+            <div class="order-total-row total">
+                  <span>Total</span>
+              <span id="order-total"></span>
+                </div>
+              </div>
+              
+          <div class="shipping-details">
+            <h3>Shipping Details</h3>
+            <div id="shipping-address"></div>
+            <div class="shipping-method">
+              <span>Shipping Method:</span>
+              <span id="shipping-method"></span>
+            </div>
+          </div>
+
+          <div class="payment-details">
+            <h3>Payment Details</h3>
+            <div class="payment-method">
+              <span>Payment Method:</span>
+              <span id="payment-method"></span>
+            </div>
+            </div>
+          </div>
+          
+          <div class="order-actions">
+            <a href="index.html" class="btn">Continue Shopping</a>
+            <a href="track-order.html" class="btn btn-outline">Track Order</a>
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <!-- Footer (Same as index.html) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Artisan</h3>
+          <p>Handcrafted jewelry and accessories made with love and attention to detail.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+            <li><a href="jewelry-care.html">Jewelry Care</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Artisan Jewelry. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/order-summary.js"></script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artisan - Handmade Jewelry & Accessories</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery UI for animations -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-wrapper">
+        <div class="logo">
+          <a href="index.html">Artisan</a>
+        </div>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+            <li><a href="payment-method.html">Payment</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-search">
+          <div class="search-container">
+            <input type="search" placeholder="Search for jewelry...">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        
+        <div class="header-actions">
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <a href="wishlist.html" class="header-icon">
+            <i class="fas fa-heart"></i>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="cart.html" class="header-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="badge cart-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="header-icon">
+            <i class="fas fa-user"></i>
+          </a>
+        </div>
+        
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="container">
+        <div class="mobile-search">
+          <input type="search" placeholder="Search for jewelry...">
+          <i class="fas fa-search"></i>
+        </div>
+        
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+            <li><a href="payment-method.html">Payment</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-actions">
+          <a href="wishlist.html" class="mobile-action-item">
+            <i class="fas fa-heart"></i>
+            <span>Wishlist</span>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="mobile-action-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+        
+        <button class="theme-toggle-mobile">
+          <i class="fas fa-moon"></i>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="container">
+        <div class="hero-slider">
+          <div class="hero-slide active">
+            <div class="hero-slide-overlay"></div>
+            <img src="images/necklace.jpg" alt="Handcrafted Elegance">
+            <div class="hero-content">
+              <h1>Handcrafted Elegance</h1>
+              <p>Discover our new collection of artisan jewelry</p>
+              <a href="category.html?category=necklaces" class="btn">Shop Now</a>
+            </div>
+          </div>
+          
+          <div class="hero-slide">
+            <div class="hero-slide-overlay"></div>
+            <img src="images/bracelet.webp" alt="Summer Essentials">
+            <div class="hero-content">
+              <h1>Summer Essentials</h1>
+              <p>Colorful pieces to brighten your summer wardrobe</p>
+              <a href="category.html?category=bracelets" class="btn">Explore Collection</a>
+            </div>
+          </div>
+          
+          <div class="hero-slide">
+            <div class="hero-slide-overlay"></div>
+            <img src="images/earing.jpg" alt="Gift Ideas">
+            <div class="hero-content">
+              <h1>Gift Ideas</h1>
+              <p>Perfect handmade gifts for your loved ones</p>
+              <a href="category.html?category=earrings" class="btn">Find Gifts</a>
+            </div>
+          </div>
+        </div>
+        
+        <button class="hero-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="hero-next"><i class="fas fa-chevron-right"></i></button>
+        
+        <div class="hero-dots">
+          <span class="hero-dot active" data-index="0"></span>
+          <span class="hero-dot" data-index="1"></span>
+          <span class="hero-dot" data-index="2"></span>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Categories -->
+    <section class="categories">
+      <div class="container">
+        <div class="section-header">
+          <h2>Shop by Category</h2>
+          <p>Browse our handcrafted collections</p>
+        </div>
+        
+        <div class="category-grid">
+          <a href="category.html?category=earrings" class="category-item">
+            <div class="category-image">
+              <img src="images/earing.jpg" alt="Earrings">
+              <div class="category-overlay">
+                <h3>Earrings</h3>
+                <p>48 items</p>
+              </div>
+            </div>
+          </a>
+          
+          <a href="category.html?category=necklaces" class="category-item">
+            <div class="category-image">
+              <img src="images/gem neck.jpg" alt="Necklaces">
+              <div class="category-overlay">
+                <h3>Necklaces</h3>
+                <p>36 items</p>
+              </div>
+            </div>
+          </a>
+          
+          <a href="category.html?category=bracelets" class="category-item">
+            <div class="category-image">
+              <img src="images/woven.webp" alt="Bracelets">
+              <div class="category-overlay">
+                <h3>Bracelets</h3>
+                <p>24 items</p>
+              </div>
+            </div>
+          </a>
+          
+          <a href="category.html?category=rings" class="category-item">
+            <div class="category-image">
+              <img src="images/ring.jpg" alt="Rings">
+              <div class="category-overlay">
+                <h3>Rings</h3>
+                <p>32 items</p>
+              </div>
+            </div>
+          </a>
+          
+          <a href="category.html?category=hair-accessories" class="category-item">
+            <div class="category-image">
+              <img src="images/hair.jpg" alt="Hair Accessories">
+              <div class="category-overlay">
+                <h3>Hair Accessories</h3>
+                <p>18 items</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Featured Products -->
+    <section class="featured-products">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Products</h2>
+          <p>Our most popular handcrafted pieces</p>
+        </div>
+        
+        <div class="product-grid" id="featured-products-grid">
+          <!-- Products will be loaded dynamically via JavaScript -->
+        </div>
+      </div>
+    </section>
+    
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="container">
+        <h2>Join Our Newsletter</h2>
+        <p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+        
+        <form id="newsletter-form" class="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Artisan</h3>
+          <p>Handcrafted jewelry and accessories made with love and attention to detail.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+            <li><a href="jewelry-care.html">Jewelry Care</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+            <li><a href="payment-method.html">Payment Methods</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Artisan Jewelry. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick View Modal -->
+  <div class="modal" id="quick-view-modal">
+    <div class="modal-content">
+      <button class="modal-close"><i class="fas fa-times"></i></button>
+      <div class="quick-view-container">
+        <!-- Content will be loaded dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="fas fa-check-circle toast-icon"></i>
+      <div class="toast-message">
+        <h4 class="toast-title">Success</h4>
+        <p class="toast-description">Item added to cart</p>
+      </div>
+    </div>
+    <button class="toast-close"><i class="fas fa-times"></i></button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

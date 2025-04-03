@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Method - Artisan</title>
+  <link rel="stylesheet  initial-scale=1.0">
+  <title>Payment Method - Artisan</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery UI for animations -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+  <!-- Header (Same as index.html) -->
+  <header class="header">
+    <div class="container">
+      <div class="header-wrapper">
+        <div class="logo">
+          <a href="index.html">Artisan</a>
+        </div>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-search">
+          <div class="search-container">
+            <input type="search" placeholder="Search for jewelry...">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        
+        <div class="header-actions">
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <a href="wishlist.html" class="header-icon">
+            <i class="fas fa-heart"></i>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="cart.html" class="header-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="badge cart-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="header-icon">
+            <i class="fas fa-user"></i>
+          </a>
+        </div>
+        
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="container">
+        <div class="mobile-search">
+          <input type="search" placeholder="Search for jewelry...">
+          <i class="fas fa-search"></i>
+        </div>
+        
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-actions">
+          <a href="wishlist.html" class="mobile-action-item">
+            <i class="fas fa-heart"></i>
+            <span>Wishlist</span>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="mobile-action-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+        
+        <button class="theme-toggle-mobile">
+          <i class="fas fa-moon"></i>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="page-header">
+        <h1>Payment Method</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="checkout.html">Checkout</a>
+          <span>/</span>
+          <span>Payment Method</span>
+        </div>
+      </div>
+      
+      <div class="checkout-container">
+        <div class="checkout-steps">
+          <div class="checkout-step completed">
+            <div class="step-number">1</div>
+            <div class="step-label">Shipping</div>
+          </div>
+          <div class="checkout-step active">
+            <div class="step-number">2</div>
+            <div class="step-label">Payment</div>
+          </div>
+          <div class="checkout-step">
+            <div class="step-number">3</div>
+            <div class="step-label">Review</div>
+          </div>
+        </div>
+        
+        <div class="checkout-grid">
+          <div class="checkout-main">
+            <div class="payment-methods">
+              <h2>Select Payment Method</h2>
+              
+              <div class="payment-tabs">
+                <button class="payment-tab active" data-method="card">
+                  <i class="fas fa-credit-card"></i>
+                  <span>Credit Card</span>
+                </button>
+                <button class="payment-tab" data-method="paypal">
+                  <i class="fab fa-paypal"></i>
+                  <span>PayPal</span>
+                </button>
+                <button class="payment-tab" data-method="apple-pay">
+                  <i class="fab fa-apple-pay"></i>
+                  <span>Apple Pay</span>
+                </button>
+                <button class="payment-tab" data-method="google-pay">
+                  <i class="fab fa-google-pay"></i>
+                  <span>Google Pay</span>
+                </button>
+              </div>
+              
+              <div class="payment-forms">
+                <!-- Credit Card Form -->
+                <div class="payment-form active" id="card-form">
+                  <form id="credit-card-form">
+                    <div class="form-group">
+                      <label for="card-name">Name on Card</label>
+                      <input type="text" id="card-name" name="card-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="card-number">Card Number</label>
+                      <div class="card-input-wrapper">
+                        <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+                        <div class="card-icons">
+                          <i class="fab fa-cc-visa"></i>
+                          <i class="fab fa-cc-mastercard"></i>
+                          <i class="fab fa-cc-amex"></i>
+                          <i class="fab fa-cc-discover"></i>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label for="card-expiry">Expiration Date</label>
+                        <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY" required>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="card-cvc">CVC</label>
+                        <div class="cvc-input-wrapper">
+                          <input type="text" id="card-cvc" name="card-cvc" placeholder="123" required>
+                          <i class="fas fa-question-circle cvc-help" title="3-digit security code on the back of your card"></i>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <div class="checkbox-group">
+                        <input type="checkbox" id="save-card" name="save-card">
+                        <label for="save-card">Save this card for future purchases</label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                
+                <!-- PayPal Form -->
+                <div class="payment-form" id="paypal-form">
+                  <div class="paypal-info">
+                    <p>You will be redirected to PayPal to complete your payment securely.</p>
+                    <div class="paypal-logo">
+                      <i class="fab fa-paypal"></i>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Apple Pay Form -->
+                <div class="payment-form" id="apple-pay-form">
+                  <div class="digital-wallet-info">
+                    <p>Click the button below to pay with Apple Pay.</p>
+                    <button class="apple-pay-button">
+                      <i class="fab fa-apple-pay"></i>
+                      <span>Pay with Apple Pay</span>
+                    </button>
+                    <p class="wallet-note">Note: Apple Pay requires Safari browser on compatible Apple devices.</p>
+                  </div>
+                </div>
+                
+                <!-- Google Pay Form -->
+                <div class="payment-form" id="google-pay-form">
+                  <div class="digital-wallet-info">
+                    <p>Click the button below to pay with Google Pay.</p>
+                    <button class="google-pay-button">
+                      <i class="fab fa-google-pay"></i>
+                      <span>Pay with Google Pay</span>
+                    </button>
+                    <p class="wallet-note">Note: Google Pay requires Chrome browser or compatible Android devices.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="billing-address">
+                <h3>Billing Address</h3>
+                
+                <div class="form-group">
+                  <div class="checkbox-group">
+                    <input type="checkbox" id="same-as-shipping" name="same-as-shipping" checked>
+                    <label for="same-as-shipping">Same as shipping address</label>
+                  </div>
+                </div>
+                
+                <div class="different-billing-address" style="display: none;">
+                  <form id="billing-address-form">
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label for="billing-first-name">First Name</label>
+                        <input type="text" id="billing-first-name" name="billing-first-name">
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="billing-last-name">Last Name</label>
+                        <input type="text" id="billing-last-name" name="billing-last-name">
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="billing-address">Address</label>
+                      <input type="text" id="billing-address" name="billing-address">
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="billing-address2">Apartment, suite, etc. (optional)</label>
+                      <input type="text" id="billing-address2" name="billing-address2">
+                    </div>
+                    
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label for="billing-city">City</label>
+                        <input type="text" id="billing-city" name="billing-city">
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="billing-state">State</label>
+                        <select id="billing-state" name="billing-state">
+                          <option value="">Select State</option>
+                          <option value="AL">Alabama</option>
+                          <option value="AK">Alaska</option>
+                          <!-- More states would be listed here -->
+                          <option value="WY">Wyoming</option>
+                        </select>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="billing-zip">ZIP Code</label>
+                        <input type="text" id="billing-zip" name="billing-zip">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              
+              <div class="form-actions">
+                <a href="checkout.html" class="btn btn-outline">Back to Shipping</a>
+                <a href="order-summary.html" class="btn">Continue to Review</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="checkout-sidebar">
+            <div class="order-summary">
+              <h3>Order Summary</h3>
+              
+              <div class="order-items">
+                <div class="order-item">
+                  <div class="order-item-image">
+                    <img src="images/earrings/earrings1.jpg" alt="Gold Hoop Earrings">
+                  </div>
+                  <div class="order-item-details">
+                    <h4>Gold Hoop Earrings</h4>
+                    <p class="order-item-variant">Gold / Medium</p>
+                    <p class="order-item-price">$45.00 <span class="order-item-quantity">× 1</span></p>
+                  </div>
+                </div>
+                
+                <div class="order-item">
+                  <div class="order-item-image">
+                    <img src="images/necklaces/necklace1.jpg" alt="Pearl Pendant Necklace">
+                  </div>
+                  <div class="order-item-details">
+                    <h4>Pearl Pendant Necklace</h4>
+                    <p class="order-item-variant">Silver / 18"</p>
+                    <p class="order-item-price">$65.00 <span class="order-item-quantity">× 1</span></p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="order-totals">
+                <div class="order-subtotal order-total-row">
+                  <span>Subtotal</span>
+                  <span>$110.00</span>
+                </div>
+                
+                <div class="order-shipping order-total-row">
+                  <span>Shipping</span>
+                  <span>$5.99</span>
+                </div>
+                
+                <div class="order-tax order-total-row">
+                  <span>Estimated Tax</span>
+                  <span>$8.80</span>
+                </div>
+                
+                <div class="order-total order-total-row">
+                  <span>Total</span>
+                  <span>$124.79</span>
+                </div>
+              </div>
+              
+              <div class="promo-code">
+                <div class="form-row">
+                  <input type="text" id="promo-code" placeholder="Promo code">
+                  <button type="button" id="apply-promo" class="btn btn-outline">Apply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (Same as index.html) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Artisan</h3>
+          <p>Handcrafted jewelry and accessories made with love and attention to detail.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+            <li><a href="jewelry-care.html">Jewelry Care</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Artisan Jewelry. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="fas fa-check-circle toast-icon"></i>
+      <div class="toast-message">
+        <h4 class="toast-title">Success</h4>
+        <p class="toast-description">Item added to cart</p>
+      </div>
+    </div>
+    <button class="toast-close"><i class="fas fa-times"></i></button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Payment method tabs
+      $('.payment-tab').on('click', function() {
+        const method = $(this).data('method');
+        
+        // Update active tab
+        $('.payment-tab').removeClass('active');
+        $(this).addClass('active');
+        
+        // Show corresponding form
+        $('.payment-form').removeClass('active');
+        $(`#${method}-form`).addClass('active');
+
+        // Store selected payment method
+        localStorage.setItem('selectedPaymentMethod', method);
+      });
+      
+      // Load previously selected payment method
+      const selectedMethod = localStorage.getItem('selectedPaymentMethod') || 'card';
+      $(`.payment-tab[data-method="${selectedMethod}"]`).click();
+      
+      // Billing address toggle
+      $('#same-as-shipping').on('change', function() {
+        if ($(this).is(':checked')) {
+          $('.different-billing-address').slideUp(300);
+        } else {
+          $('.different-billing-address').slideDown(300);
+        }
+      });
+      
+      // Credit card input formatting
+      $('#card-number').on('input', function() {
+        let value = $(this).val().replace(/\D/g, '');
+        let formattedValue = '';
+        
+        for (let i = 0; i < value.length; i++) {
+          if (i > 0 && i % 4 === 0) {
+            formattedValue += ' ';
+          }
+          formattedValue += value[i];
+        }
+        
+        $(this).val(formattedValue);
+      });
+      
+      $('#card-expiry').on('input', function() {
+        let value = $(this).val().replace(/\D/g, '');
+        let formattedValue = '';
+        
+        if (value.length > 0) {
+          formattedValue = value.substring(0, 2);
+          if (value.length > 2) {
+            formattedValue += '/' + value.substring(2, 4);
+          }
+        }
+        
+        $(this).val(formattedValue);
+      });
+      
+      $('#card-cvc').on('input', function() {
+        let value = $(this).val().replace(/\D/g, '');
+        $(this).val(value.substring(0, 4));
+      });
+
+      // Handle payment method specific actions
+      $('.payment-form').on('submit', function(e) {
+        e.preventDefault();
+        const method = $(this).attr('id').replace('-form', '');
+        
+        // Show loading state
+        const submitBtn = $(this).find('button[type="submit"]');
+        submitBtn.html('<i class="fas fa-spinner fa-spin"></i> Processing...').prop('disabled', true);
+        
+        // Simulate payment processing
+        setTimeout(() => {
+          submitBtn.html('Pay Now').prop('disabled', false);
+          
+          // Store payment details
+          const paymentDetails = {
+            method: method,
+            timestamp: new Date().toISOString()
+          };
+          
+          if (method === 'card') {
+            paymentDetails.cardNumber = $('#card-number').val().slice(-4);
+            paymentDetails.cardType = detectCardType($('#card-number').val());
+          }
+          
+          localStorage.setItem('paymentDetails', JSON.stringify(paymentDetails));
+          
+          // Redirect to order summary
+          window.location.href = 'order-summary.html';
+        }, 2000);
+      });
+      
+      // Helper function to detect card type
+      function detectCardType(number) {
+        number = number.replace(/\s/g, '');
+        if (/^4/.test(number)) return 'Visa';
+        if (/^5[1-5]/.test(number)) return 'Mastercard';
+        if (/^3[47]/.test(number)) return 'American Express';
+        if (/^6(?:011|5)/.test(number)) return 'Discover';
+        return 'Unknown';
+      }
+      
+      // Promo code application
+      $('#apply-promo').on('click', function() {
+        const promoCode = $('#promo-code').val().trim();
+        
+        if (!promoCode) {
+          showToast('Error', 'Please enter a promo code.', 'error');
+          return;
+        }
+        
+        // Simulate API call
+        $(this).text('Applying...').prop('disabled', true);
+        
+        setTimeout(() => {
+          $(this).text('Apply').prop('disabled', false);
+          
+          if (promoCode.toLowerCase() === 'welcome10') {
+            // Update order summary with discount
+            const discountRow = `
+              <div class="order-discount order-total-row">
+                <span>Discount (10%)</span>
+                <span>-$11.00</span>
+              </div>
+            `;
+            
+            // Insert discount before total
+            $('.order-tax').after(discountRow);
+            
+            // Update total
+            $('.order-total span:last-child').text('$113.79');
+            
+            showToast('Success', 'Promo code applied successfully!');
+          } else {
+            showToast('Error', 'Invalid promo code. Please try again.', 'error');
+          }
+        }, 1000);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Artisan</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery UI for animations -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+  <!-- Header (Same as index.html) -->
+  <header class="header">
+    <div class="container">
+      <div class="header-wrapper">
+        <div class="logo">
+          <a href="index.html">Artisan</a>
+        </div>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-search">
+          <div class="search-container">
+            <input type="search" placeholder="Search for jewelry...">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        
+        <div class="header-actions">
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <a href="wishlist.html" class="header-icon">
+            <i class="fas fa-heart"></i>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="cart.html" class="header-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="badge cart-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="header-icon">
+            <i class="fas fa-user"></i>
+          </a>
+        </div>
+        
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="container">
+        <div class="mobile-search">
+          <input type="search" placeholder="Search for jewelry...">
+          <i class="fas fa-search"></i>
+        </div>
+        
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-actions">
+          <a href="wishlist.html" class="mobile-action-item">
+            <i class="fas fa-heart"></i>
+            <span>Wishlist</span>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="mobile-action-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+        
+        <button class="theme-toggle-mobile">
+          <i class="fas fa-moon"></i>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="page-header">
+        <h1>Contact Us</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Contact Us</span>
+        </div>
+      </div>
+      
+      <div class="contact-container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-section">
+              <h2>Get in Touch</h2>
+              <p>We'd love to hear from you! Whether you have a question about our products, need help with an order, or want to collaborate, our team is here to assist you.</p>
+              
+              <div class="contact-methods">
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h3>Email Us</h3>
+                    <p>For general inquiries: <a href="mailto:info@artisanjewelry.com">info@artisanjewelry.com</a></p>
+                    <p>For customer support: <a href="mailto:support@artisanjewelry.com">support@artisanjewelry.com</a></p>
+                    <p>For wholesale inquiries: <a href="mailto:wholesale@artisanjewelry.com">wholesale@artisanjewelry.com</a></p>
+                  </div>
+                </div>
+                
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h3>Call Us</h3>
+                    <p>Customer Service: <a href="tel:+18005551234">1-800-555-1234</a></p>
+                    <p>Hours: Monday-Friday, 9am-5pm EST</p>
+                  </div>
+                </div>
+                
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h3>Visit Our Studio</h3>
+                    <p>123 Artisan Way<br>Jewelry District<br>New York, NY 10001</p>
+                    <p>By appointment only</p>
+                  </div>
+                </div>
+                
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <i class="fas fa-comments"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h3>Live Chat</h3>
+                    <p>Available on our website during business hours</p>
+                    <button class="btn btn-outline" id="start-chat-btn">Start Chat</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="social-connect">
+                <h3>Connect With Us</h3>
+                <div class="social-icons large">
+                  <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                  <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                  <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                  <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form-container">
+            <div class="contact-form-wrapper">
+              <h2>Send Us a Message</h2>
+              <form id="contact-form" class="contact-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="subject">Subject *</label>
+                  <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="inquiry-type">Inquiry Type</label>
+                  <select id="inquiry-type" name="inquiry-type">
+                    <option value="general">General Inquiry</option>
+                    <option value="order">Order Status</option>
+                    <option value="product">Product Question</option>
+                    <option value="returns">Returns & Exchanges</option>
+                    <option value="wholesale">Wholesale Inquiry</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="order-number">Order Number (if applicable)</label>
+                  <input type="text" id="order-number" name="order-number">
+                </div>
+                
+                <div class="form-group">
+                  <label for="message">Your Message *</label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                  <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Subscribe to our newsletter for updates and special offers</label>
+                  </div>
+                </div>
+                
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-full">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-map">
+          <h2>Our Location</h2>
+          <div class="map-container">
+            <!-- Placeholder for map - in a real implementation, you would use Google Maps or another map service -->
+            <img src="map.webp" alt="Map location" class="map-placeholder" width="400" height="200">
+          </div>
+        </div>
+        
+        <div class="faq-preview">
+          <h2>Frequently Asked Questions</h2>
+          <p>Find quick answers to common questions:</p>
+          
+          <div class="faq-preview-grid">
+            <div class="faq-preview-item">
+              <h3>How can I track my order?</h3>
+              <p>You can track your order by visiting our <a href="track-order.html">Track Order</a> page or by checking your order confirmation email for tracking information.</p>
+            </div>
+            
+            <div class="faq-preview-item">
+              <h3>What is your return policy?</h3>
+              <p>We accept returns within 30 days of delivery. Visit our <a href="shipping-returns.html">Shipping & Returns</a> page for more details.</p>
+            </div>
+            
+            <div class="faq-preview-item">
+              <h3>Do you offer international shipping?</h3>
+              <p>Yes, we ship to most countries worldwide. International shipping rates and delivery times vary by location.</p>
+            </div>
+            
+            <div class="faq-preview-item">
+              <h3>How do I care for my jewelry?</h3>
+              <p>Find detailed care instructions on our <a href="jewelry-care.html">Jewelry Care</a> page.</p>
+            </div>
+          </div>
+          
+          <a href="faq.html" class="btn btn-outline">View All FAQs</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (Same as index.html) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Artisan</h3>
+          <p>Handcrafted jewelry and accessories made with love and attention to detail.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+            <li><a href="jewelry-care.html">Jewelry Care</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Artisan Jewelry. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="fas fa-check-circle toast-icon"></i>
+      <div class="toast-message">
+        <h4 class="toast-title">Success</h4>
+        <p class="toast-description">Item added to cart</p>
+      </div>
+    </div>
+    <button class="toast-close"><i class="fas fa-times"></i></button>
+  </div>
+
+  <!-- Chat Widget (Simplified) -->
+  <div class="chat-widget" id="chat-widget">
+    <div class="chat-header">
+      <h3>Live Chat</h3>
+      <button class="chat-close" id="close-chat-btn"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="chat-message agent">
+        <div class="chat-bubble">
+          <p>Hello! How can I help you today?</p>
+        </div>
+        <span class="chat-time">Just now</span>
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chat-message-input" placeholder="Type your message...">
+      <button id="send-chat-btn"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Contact form submission
+      $('#contact-form').on('submit', function(e) {
+        e.preventDefault();
+        
+        // Simulate form submission
+        const submitBtn = $(this).find('button[type="submit"]');
+        submitBtn.html('<i class="fas fa-spinner fa-spin"></i> Sending...').prop('disabled', true);
+        
+        setTimeout(function() {
+          submitBtn.html('Send Message').prop('disabled', false);
+          
+          // Show success message
+          showToast('Message Sent', 'Thank you for your message. We\'ll get back to you shortly.');
+          
+          // Reset form
+          $('#contact-form')[0].reset();
+        }, 1500);
+      });
+      
+      // Chat widget functionality
+      $('#start-chat-btn').on('click', function() {
+        $('#chat-widget').addClass('active');
+      });
+      
+      $('#close-chat-btn').on('click', function() {
+        $('#chat-widget').removeClass('active');
+      });
+      
+      $('#send-chat-btn').on('click', sendChatMessage);
+      
+      $('#chat-message-input').on('keypress', function(e) {
+        if (e.which === 13) {
+          sendChatMessage();
+        }
+      });
+      
+      function sendChatMessage() {
+        const messageInput = $('#chat-message-input');
+        const message = messageInput.val().trim();
+        
+        if (message) {
+          // Add user message
+          const userMessage = `
+            <div class="chat-message user">
+              <div class="chat-bubble">
+                <p>${message}</p>
+              </div>
+              <span class="chat-time">Just now</span>
+            </div>
+          `;
+          
+          $('#chat-messages').append(userMessage);
+          messageInput.val('');
+          
+          // Scroll to bottom
+          const chatMessages = document.getElementById('chat-messages');
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+          
+          // Simulate agent response after a delay
+          setTimeout(function() {
+            const agentMessage = `
+              <div class="chat-message agent">
+                <div class="chat-bubble">
+                  <p>Thanks for your message. This is a demo chat. In a real implementation, our customer service team would respond here.</p>
+                </div>
+                <span class="chat-time">Just now</span>
+              </div>
+            `;
+            
+            $('#chat-messages').append(agentMessage);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+          }, 1000);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

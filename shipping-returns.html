@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipping & Returns - Artisan</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery UI for animations -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+  <!-- Header (Same as index.html) -->
+  <header class="header">
+    <div class="container">
+      <div class="header-wrapper">
+        <div class="logo">
+          <a href="index.html">Artisan</a>
+        </div>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-search">
+          <div class="search-container">
+            <input type="search" placeholder="Search for jewelry...">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        
+        <div class="header-actions">
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <a href="wishlist.html" class="header-icon">
+            <i class="fas fa-heart"></i>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="cart.html" class="header-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="badge cart-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="header-icon">
+            <i class="fas fa-user"></i>
+          </a>
+        </div>
+        
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="container">
+        <div class="mobile-search">
+          <input type="search" placeholder="Search for jewelry...">
+          <i class="fas fa-search"></i>
+        </div>
+        
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-actions">
+          <a href="wishlist.html" class="mobile-action-item">
+            <i class="fas fa-heart"></i>
+            <span>Wishlist</span>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="mobile-action-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+        
+        <button class="theme-toggle-mobile">
+          <i class="fas fa-moon"></i>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="page-header">
+        <h1>Shipping & Returns</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Shipping & Returns</span>
+        </div>
+      </div>
+      
+      <div class="policy-container">
+        <div class="policy-tabs">
+          <button class="policy-tab active" data-tab="shipping">Shipping</button>
+          <button class="policy-tab" data-tab="returns">Returns & Refunds</button>
+          <button class="policy-tab" data-tab="exchanges">Exchanges</button>
+        </div>
+        
+        <div class="policy-content">
+          <!-- Shipping Policy -->
+          <div class="policy-panel active" id="shipping-panel">
+            <h2>Shipping Policy</h2>
+            
+            <div class="policy-section">
+              <h3>Processing Time</h3>
+              <p>All orders are processed within 1-2 business days (excluding weekends and holidays) after receiving your order confirmation email. You will receive another notification when your order has shipped.</p>
+            </div>
+            
+            <div class="policy-section">
+              <h3>Shipping Rates & Delivery Times</h3>
+              <div class="shipping-table">
+                <div class="shipping-table-header">
+                  <div>Shipping Method</div>
+                  <div>Estimated Delivery Time</div>
+                  <div>Cost</div>
+                </div>
+                
+                <div class="shipping-table-row">
+                  <div>Standard Shipping (US)</div>
+                  <div>3-5 business days</div>
+                  <div>$5.99 (Free on orders over $50)</div>
+                </div>
+                
+                <div class="shipping-table-row">
+                  <div>Express Shipping (US)</div>
+                  <div>1-2 business days</div>
+                  <div>$12.99</div>
+                </div>
+                
+                <div class="shipping-table-row">
+                  <div>International Shipping</div>
+                  <div>7-14 business days</div>
+                  <div>$15.99 (Free on orders over $100)</div>
+                </div>
+              </div>
+              <p>Please note that these are estimates and cannot be guaranteed. Delivery time depends on the shipping carrier and other factors outside of our control.</p>
+            </div>
+            
+            <div class="policy-section">
+              <h3>International Shipping</h3>
+              <p>We ship to most countries worldwide. International customers may be subject to customs fees and import taxes that are levied once a shipment reaches your country. These charges are the responsibility of the recipient and vary by country. We cannot predict what these charges will be and are not responsible for these charges.</p>
+            </div>
+            
+            <div class="policy-section">
+              <h3>Order Tracking</h3>
+              <p>Once your order ships, you will receive a tracking number via email. You can track your order by:</p>
+              <ul>
+                <li>Clicking the tracking link in your shipping confirmation email</li>
+                <li>Visiting our <a href="track-order.html">Track Order</a> page</li>
+                <li>Logging into your account and viewing your order history</li>
+              </ul>
+              <p>Please allow 24-48 hours for the tracking information to become available.</p>
+            </div>
+            
+            <div class="policy-section">
+              <h3>Shipping Delays</h3>
+              <p>While we make every effort to ship orders promptly, occasionally delays occur due to:</p>
+              <ul>
+                <li>High order volume during peak seasons</li>
+                <li>Inclement weather</li>
+                <li>Carrier delays</li>
+                <li>Customs processing for international orders</li>
+              </ul>
+              <p>We will notify you of any significant delays affecting your order.</p>
+            </div>
+          </div>
+          
+          <!-- Returns Policy -->
+          <div class="policy-panel" id="returns-panel">
+            <h2>Returns Policy</h2>
+            
+            <div class="policy-section">
+              <h3>Return Eligibility</h3>
+              <p>We accept returns within 30 days of delivery for most items. To be eligible for a return, your item must be:</p>
+              <ul>
+                <li>In the same condition that you received it</li>
+                <li>Unworn and unused</li>
+                <li>In the original packaging with all tags attached</li>
+              </ul>
+              <p><strong>Non-Returnable Items:</strong> The following items cannot be returned:</p>
+              <ul>
+                <li>Custom or personalized orders</li>
+                <li>Sale items (unless defective)</li>
+                <li>Earrings (for hygiene reasons)</li>
+                <li>Gift cards</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h3>Return Process</h3>
+              <p>To initiate a return, please follow these steps:</p>
+              <ol>
+                <li>Log into your account and go to your order history</li>
+                <li>Select the order containing the item(s) you wish to return</li>
+                <li>Click "Return Items" and follow the instructions</li>
+                <li>Print the return shipping label (if applicable)</li>
+                <li>Package the item(s) securely with all original packaging</li>
+                <li>Drop off the package at the designated shipping carrier</li>
+              </ol>
+              <p>If you don't have an account or need assistance, please contact our customer service team at <a href="mailto:returns@artisanjewelry.com">returns@artisanjewelry.com</a>.</p>
+            </div>
+            
+            <div class="policy-section">
+              <h3>Return Shipping</h3>
+              <p>You are responsible for the cost of return shipping unless your item is defective or we made an error. If you received free shipping on your original order, the actual shipping cost may be deducted from your refund.</p>
+              <p>For defective items or our errors, we will provide a prepaid return shipping label.</p>
+            </div>
+            
+            <div class="policy-section">
+              <h3>Refunds</h3>
+              <p>Once we receive your return, we will inspect the item(s) and notify you of the status of your refund. If approved, your refund will be processed within 3-5 business days. Refunds will be issued to the original payment method used for the purchase.</p>
+              <p>Please note:</p>
+              <ul>
+                <li>Original shipping charges are non-refundable unless the return is due to our error</li>
+                <li>Depending on your financial institution, refunds may take an additional 5-10 business days to appear in your account</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Exchanges Policy -->
+          <div class="policy-panel" id="exchanges-panel">
+            <h2>Exchanges Policy</h2>
+            
+            <div class="policy-section">
+              <h3>Exchange Eligibility</h3>
+              <p>We offer exchanges within 30 days of delivery for most items. The same eligibility requirements for returns apply to exchanges.</p>
+            </div>
+            
+            <div class="policy-section">
+              <h3>Exchange Process</h3>
+              <p>To request an exchange:</p>
+              <ol>
+                <li>Log into your account and go to your order history</li>
+                <li>Select the order containing the item(s) you wish to exchange</li>
+                <li>Click "Exchange Items" and follow the instructions</li>
+                <li>Select the replacement item(s) you want</li>
+                <li>Print the return shipping label (if applicable)</li>
+                <li>Package the original item(s) securely with all original packaging</li>
+                <li>Drop off the package at the designated shipping carrier</li>
+              </ol>
+              <p>If you don't have an account or need assistance, please contact our customer service team at <a href="mailto:exchanges@artisanjewelry.com">exchanges@artisanjewelry.com</a>.</p>
+            </div>
+            
+            <div class="policy-section">
+              <h3>Exchange Shipping</h3>
+              <p>You are responsible for the cost of shipping the original item back to us. We will cover the cost of shipping the replacement item to you for your first exchange. Additional exchanges may incur shipping charges.</p>
+            </div>
+            
+            <div class="policy-section">
+              <h3>Price Differences</h3>
+              <p>If the replacement item costs more than the original item, you will be charged for the difference. If the replacement item costs less, we will refund the difference to your original payment method.</p>
+            </div>
+            
+            <div class="policy-section">
+              <h3>Processing Time</h3>
+              <p>Exchanges typically take 7-10 business days to process from the time we receive your return. You will receive email notifications when we receive your return and when your exchange ships.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (Same as index.html) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Artisan</h3>
+          <p>Handcrafted jewelry and accessories made with love and attention to detail.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+            <li><a href="jewelry-care.html">Jewelry Care</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Artisan Jewelry. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="fas fa-check-circle toast-icon"></i>
+      <div class="toast-message">
+        <h4 class="toast-title">Success</h4>
+        <p class="toast-description">Item added to cart</p>
+      </div>
+    </div>
+    <button class="toast-close"><i class="fas fa-times"></i></button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Tab switching
+      $('.policy-tab').on('click', function() {
+        const tab = $(this).data('tab');
+        
+        // Update active tab
+        $('.policy-tab').removeClass('active');
+        $(this).addClass('active');
+        
+        // Show corresponding panel
+        $('.policy-panel').removeClass('active');
+        $(`#${tab}-panel`).addClass('active');
+        
+        // Update URL hash
+        window.location.hash = tab;
+      });
+      
+      // Check for hash in URL
+      if (window.location.hash) {
+        const hash = window.location.hash.substring(1);
+        if (['shipping', 'returns', 'exchanges'].includes(hash)) {
+          $(`.policy-tab[data-tab="${hash}"]`).click();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - Artisan</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery UI for animations -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+  <!-- Header (Same as index.html) -->
+  <header class="header">
+    <div class="container">
+      <div class="header-wrapper">
+        <div class="logo">
+          <a href="index.html">Artisan</a>
+        </div>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-search">
+          <div class="search-container">
+            <input type="search" placeholder="Search for jewelry...">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        
+        <div class="header-actions">
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <a href="wishlist.html" class="header-icon">
+            <i class="fas fa-heart"></i>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="cart.html" class="header-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="badge cart-count">0</span>
+          </a>
+          
+          <a href="sign-in.html" class="header-icon">
+            <i class="fas fa-user"></i>
+          </a>
+        </div>
+        
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="container">
+        <div class="mobile-search">
+          <input type="search" placeholder="Search for jewelry...">
+          <i class="fas fa-search"></i>
+        </div>
+        
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-actions">
+          <a href="wishlist.html" class="mobile-action-item">
+            <i class="fas fa-heart"></i>
+            <span>Wishlist</span>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="sign-in.html" class="mobile-action-item">
+            <i class="fas fa-user"></i>
+            <span>Sign In</span>
+          </a>
+        </div>
+        
+        <button class="theme-toggle-mobile">
+          <i class="fas fa-moon"></i>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="auth-container">
+        <div class="auth-card">
+          <div class="auth-tabs">
+            <button class="auth-tab active" data-tab="sign-in">Sign In</button>
+            <button class="auth-tab" data-tab="register">Register</button>
+          </div>
+          
+          <div class="auth-forms">
+            <!-- Sign In Form -->
+            <div class="auth-form active" id="sign-in-form">
+              <h2>Welcome Back</h2>
+              <p class="auth-subtitle">Sign in to your account to continue</p>
+              
+              <form id="login-form">
+                <div class="form-group">
+                  <label for="login-email">Email Address</label>
+                  <input type="email" id="login-email" name="login-email" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="login-password">Password</label>
+                  <div class="password-input">
+                    <input type="password" id="login-password" name="login-password" required>
+                    <button type="button" class="password-toggle">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </div>
+                </div>
+                
+                <div class="form-row form-actions-row">
+                  <div class="checkbox-group">
+                    <input type="checkbox" id="remember-me" name="remember-me">
+                    <label for="remember-me">Remember me</label>
+                  </div>
+                  
+                  <a href="forgot-password.html" class="forgot-password">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="btn btn-full">Sign In</button>
+              </form>
+              
+              <div class="auth-divider">
+                <span>or continue with</span>
+              </div>
+              
+              <div class="social-auth">
+                <button class="social-auth-btn google-btn">
+                  <i class="fab fa-google"></i>
+                  <span>Google</span>
+                </button>
+                
+                <button class="social-auth-btn facebook-btn">
+                  <i class="fab fa-facebook-f"></i>
+                  <span>Facebook</span>
+                </button>
+                
+                <button class="social-auth-btn apple-btn">
+                  <i class="fab fa-apple"></i>
+                  <span>Apple</span>
+                </button>
+              </div>
+            </div>
+            
+            <!-- Register Form -->
+            <div class="auth-form" id="register-form">
+              <h2>Create an Account</h2>
+              <p class="auth-subtitle">Join Artisan to enjoy exclusive benefits</p>
+              
+              <form id="signup-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="signup-email">Email Address</label>
+                  <input type="email" id="signup-email" name="signup-email" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="signup-password">Password</label>
+                  <div class="password-input">
+                    <input type="password" id="signup-password" name="signup-password" required>
+                    <button type="button" class="password-toggle">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </div>
+                  <div class="password-strength">
+                    <div class="strength-meter">
+                      <div class="strength-segment"></div>
+                      <div class="strength-segment"></div>
+                      <div class="strength-segment"></div>
+                      <div class="strength-segment"></div>
+                    </div>
+                    <span class="strength-text">Password strength</span>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="confirm-password">Confirm Password</label>
+                  <div class="password-input">
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    <button type="button" class="password-toggle">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <div class="checkbox-group">
+                    <input type="checkbox" id="terms-agree" name="terms-agree" required>
+                    <label for="terms-agree">I agree to the <a href="terms-conditions.html" target="_blank">Terms & Conditions</a> and <a href="privacy-policy.html" target="_blank">Privacy Policy</a></label>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter-signup" name="newsletter-signup">
+                    <label for="newsletter-signup">Subscribe to our newsletter for updates and special offers</label>
+                  </div>
+                </div>
+                
+                <button type="submit" class="btn btn-full">Create Account</button>
+              </form>
+              
+              <div class="auth-divider">
+                <span>or register with</span>
+              </div>
+              
+              <div class="social-auth">
+                <button class="social-auth-btn google-btn">
+                  <i class="fab fa-google"></i>
+                  <span>Google</span>
+                </button>
+                
+                <button class="social-auth-btn facebook-btn">
+                  <i class="fab fa-facebook-f"></i>
+                  <span>Facebook</span>
+                </button>
+                
+                <button class="social-auth-btn apple-btn">
+                  <i class="fab fa-apple"></i>
+                  <span>Apple</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="auth-benefits">
+          <h3>Benefits of Creating an Account</h3>
+          <ul class="benefits-list">
+            <li>
+              <div class="benefit-icon">
+                <i class="fas fa-truck"></i>
+              </div>
+              <div class="benefit-content">
+                <h4>Faster Checkout</h4>
+                <p>Save your shipping and payment information for a quicker checkout experience.</p>
+              </div>
+            </li>
+            
+            <li>
+              <div class="benefit-icon">
+                <i class="fas fa-history"></i>
+              </div>
+              <div class="benefit-content">
+                <h4>Order History</h4>
+                <p>Track your orders and view your complete purchase history.</p>
+              </div>
+            </li>
+            
+            <li>
+              <div class="benefit-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="benefit-content">
+                <h4>Wishlist</h4>
+                <p>Save your favorite items to purchase later or share with friends and family.</p>
+              </div>
+            </li>
+            
+            <li>
+              <div class="benefit-icon">
+                <i class="fas fa-tag"></i>
+              </div>
+              <div class="benefit-content">
+                <h4>Exclusive Offers</h4>
+                <p>Receive special promotions and early access to new collections.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (Same as index.html) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Artisan</h3>
+          <p>Handcrafted jewelry and accessories made with love and attention to detail.</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+            <li><a href="jewelry-care.html">Jewelry Care</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Artisan Jewelry. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="fas fa-check-circle toast-icon"></i>
+      <div class="toast-message">
+        <h4 class="toast-title">Success</h4>
+        <p class="toast-description">Item added to cart</p>
+      </div>
+    </div>
+    <button class="toast-close"><i class="fas fa-times"></i></button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Auth tabs switching
+      $('.auth-tab').on('click', function() {
+        const tab = $(this).data('tab');
+        
+        // Update active tab
+        $('.auth-tab').removeClass('active');
+        $(this).addClass('active');
+        
+        // Show corresponding form
+        $('.auth-form').removeClass('active');
+        $(`#${tab}-form`).addClass('active');
+      });
+      
+      // Password visibility toggle
+      $('.password-toggle').on('click', function() {
+        const passwordInput = $(this).siblings('input');
+        const icon = $(this).find('i');
+        
+        if (passwordInput.attr('type') === 'password') {
+          passwordInput.attr('type', 'text');
+          icon.removeClass('fa-eye').addClass('fa-eye-slash');
+        } else {
+          passwordInput.attr('type', 'password');
+          icon.removeClass('fa-eye-slash').addClass('fa-eye');
+        }
+      });
+      
+      // Password strength meter
+      $('#signup-password').on('input', function() {
+        const password = $(this).val();
+        let strength = 0;
+        
+        // Check password length
+        if (password.length >= 8) {
+          strength += 1;
+        }
+        
+        // Check for lowercase and uppercase letters
+        if (/[a-z]/.test(password) && /[A-Z]/.test(password)) {
+          strength += 1;
+        }
+        
+        // Check for numbers
+        if (/\d/.test(password)) {
+          strength += 1;
+        }
+        
+        // Check for special characters
+        if (/[^a-zA-Z0-9]/.test(password)) {
+          strength += 1;
+        }
+        
+        // Update strength meter
+        const segments = $('.strength-segment');
+        segments.removeClass('active');
+        
+        for (let i = 0; i < strength; i++) {
+          segments.eq(i).addClass('active');
+        }
+        
+        // Update strength text
+        const strengthText = $('.strength-text');
+        switch (strength) {
+          case 0:
+            strengthText.text('Password strength: Weak');
+            break;
+          case 1:
+            strengthText.text('Password strength: Weak');
+            break;
+          case 2:
+            strengthText.text('Password strength: Medium');
+            break;
+          case 3:
+            strengthText.text('Password strength: Strong');
+            break;
+          case 4:
+            strengthText.text('Password strength: Very Strong');
+            break;
+        }
+      });
+      
+      // Login form submission
+      $('#login-form').on('submit', function(e) {
+        e.preventDefault();
+        
+        const email = $('#login-email').val();
+        const password = $('#login-password').val();
+        
+        // Simulate form validation
+        if (!email || !password) {
+          showToast('Error', 'Please fill in all required fields.', 'error');
+          return;
+        }
+        
+        // Simulate login API call
+        const submitBtn = $(this).find('button[type="submit"]');
+        submitBtn.html('<i class="fas fa-spinner fa-spin"></i> Signing In...').prop('disabled', true);
+        
+        setTimeout(function() {
+          submitBtn.html('Sign In').prop('disabled', false);
+          
+          // Simulate successful login
+          showToast('Success', 'You have successfully signed in!');
+          
+          // Redirect to profile page after successful login
+          setTimeout(function() {
+            window.location.href = 'profile.html';
+          }, 1500);
+        }, 2000);
+      });
+      
+      // Signup form submission
+      $('#signup-form').on('submit', function(e) {
+        e.preventDefault();
+        
+        const firstName = $('#first-name').val();
+        const lastName = $('#last-name').val();
+        const email = $('#signup-email').val();
+        const password = $('#signup-password').val();
+        const confirmPassword = $('#confirm-password').val();
+        const termsAgreed = $('#terms-agree').is(':checked');
+        
+        // Simulate form validation
+        if (!firstName || !lastName || !email || !password || !confirmPassword) {
+          showToast('Error', 'Please fill in all required fields.', 'error');
+          return;
+        }
+        
+        if (password !== confirmPassword) {
+          showToast('Error', 'Passwords do not match.', 'error');
+          return;
+        }
+        
+        if (!termsAgreed) {
+          showToast('Error', 'You must agree to the Terms & Conditions.', 'error');
+          return;
+        }
+        
+        // Simulate signup API call
+        const submitBtn = $(this).find('button[type="submit"]');
+        submitBtn.html('<i class="fas fa-spinner fa-spin"></i> Creating Account...').prop('disabled', true);
+        
+        setTimeout(function() {
+          submitBtn.html('Create Account').prop('disabled', false);
+          
+          // Simulate successful signup
+          showToast('Success', 'Your account has been created successfully!');
+          
+          // Redirect to profile page after successful signup
+          setTimeout(function() {
+            window.location.href = 'profile.html';
+          }, 1500);
+        }, 2000);
+      });
+      
+      // Social auth buttons
+      $('.social-auth-btn').on('click', function() {
+        const provider = $(this).hasClass('google-btn') ? 'Google' : 
+                         $(this).hasClass('facebook-btn') ? 'Facebook' : 'Apple';
+        
+        // Simulate social auth
+        $(this).html(`<i class="fas fa-spinner fa-spin"></i> Connecting...`).prop('disabled', true);
+        
+        setTimeout(() => {
+          $(this).html(`<i class="fab fa-${provider.toLowerCase()}"></i> <span>${provider}</span>`).prop('disabled', false);
+          
+          showToast('Success', `Successfully signed in with ${provider}!`);
+          
+          // Redirect to profile page after successful login
+          setTimeout(function() {
+            window.location.href = 'profile.html';
+          }, 1500);
+        }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>

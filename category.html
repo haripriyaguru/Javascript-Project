@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Category - Artisan</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/filters.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery UI for animations -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <!-- jQuery UI Slider -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+</head>
+<body>
+  <!-- Header (Same as index.html) -->
+  <header class="header">
+    <!-- Header content (same as index.html) -->
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="breadcrumb" id="category-breadcrumb">
+        <!-- Breadcrumb will be loaded dynamically -->
+      </div>
+      
+      <div class="category-header">
+        <h1 id="category-title">Products</h1>
+        
+        <div class="category-actions">
+          <div class="sort-dropdown">
+            <select id="sort-select">
+              <option value="featured">Featured</option>
+              <option value="price-low-high">Price: Low to High</option>
+              <option value="price-high-low">Price: High to Low</option>
+              <option value="rating">Highest Rated</option>
+              <option value="newest">Newest</option>
+            </select>
+          </div>
+          
+          <button class="filter-btn" id="filter-btn">
+            <i class="fas fa-sliders-h"></i>
+            Filters
+          </button>
+        </div>
+      </div>
+      
+      <div class="category-container">
+        <div class="filter-sidebar" id="filter-sidebar">
+          <div class="filter-header">
+            <h3>Filters</h3>
+            <button class="filter-close" id="filter-close">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          
+          <div class="filter-content">
+            <div class="filter-section">
+              <h4>Price Range</h4>
+              <div class="price-slider-container">
+                <div id="price-slider"></div>
+                <div class="price-range">
+                  <span id="price-min">$0</span>
+                  <span id="price-max">$100</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="filter-section">
+              <h4>Color</h4>
+              <div class="filter-options" id="color-filters">
+                <!-- Color filters will be loaded dynamically -->
+              </div>
+            </div>
+            
+            <div class="filter-section">
+              <h4>Material</h4>
+              <div class="filter-options" id="material-filters">
+                <!-- Material filters will be loaded dynamically -->
+              </div>
+            </div>
+            
+            <div class="filter-section">
+              <h4>Availability</h4>
+              <div class="filter-options">
+                <div class="filter-option">
+                  <input type="checkbox" id="in-stock">
+                  <label for="in-stock">In Stock Only</label>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" id="new-arrivals">
+                  <label for="new-arrivals">New Arrivals</label>
+                </div>
+              </div>
+            </div>
+            
+            <button class="btn btn-outline btn-full" id="reset-filters">Reset Filters</button>
+          </div>
+        </div>
+        
+        <div class="category-products">
+          <div class="product-grid" id="category-products-grid">
+            <!-- Products will be loaded dynamically -->
+          </div>
+          
+          <div class="no-products" id="no-products" style="display: none;">
+            <h2>No products found</h2>
+            <p>Try adjusting your filters or check back later for new arrivals.</p>
+            <button class="btn btn-outline" id="reset-filters-empty">Reset Filters</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Filter Overlay -->
+  <div class="filter-overlay" id="filter-overlay"></div>
+
+  <!-- Footer (Same as index.html) -->
+  <footer class="footer">
+    <!-- Footer content (same as index.html) -->
+  </footer>
+
+  <!-- Quick View Modal -->
+  <div class="modal" id="quick-view-modal">
+    <div class="modal-content">
+      <button class="modal-close"><i class="fas fa-times"></i></button>
+      <div class="quick-view-container">
+        <!-- Content will be loaded dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="fas fa-check-circle toast-icon"></i>
+      <div class="toast-message">
+        <h4 class="toast-title">Success</h4>
+        <p class="toast-description">Item added to cart</p>
+      </div>
+    </div>
+    <button class="toast-close"><i class="fas fa-times"></i></button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/category.js"></script>
+</body>
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainability - Artisan</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery UI for animations -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+  <!-- Header (Same as index.html) -->
+  <header class="header">
+    <div class="container">
+      <div class="header-wrapper">
+        <div class="logo">
+          <a href="index.html">Artisan</a>
+        </div>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-search">
+          <div class="search-container">
+            <input type="search" placeholder="Search for jewelry...">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        
+        <div class="header-actions">
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <a href="wishlist.html" class="header-icon">
+            <i class="fas fa-heart"></i>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="cart.html" class="header-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="badge cart-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="header-icon">
+            <i class="fas fa-user"></i>
+          </a>
+        </div>
+        
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="container">
+        <div class="mobile-search">
+          <input type="search" placeholder="Search for jewelry...">
+          <i class="fas fa-search"></i>
+        </div>
+        
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-actions">
+          <a href="wishlist.html" class="mobile-action-item">
+            <i class="fas fa-heart"></i>
+            <span>Wishlist</span>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="mobile-action-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+        
+        <button class="theme-toggle-mobile">
+          <i class="fas fa-moon"></i>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <div class="sustainability-hero">
+      <div class="container">
+        <div class="sustainability-hero-content">
+          <h1>Our Commitment to Sustainability</h1>
+          <p>Creating beautiful jewelry with respect for people and planet</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="sustainability-container">
+        <!-- Introduction Section -->
+        <div class="sustainability-section intro-section">
+          <div class="sustainability-grid">
+            <div class="sustainability-content">
+              <h2>Our Approach</h2>
+              <p>At Artisan, sustainability isn't just a buzzword—it's woven into every aspect of our business. We believe that beautiful jewelry shouldn't come at the expense of our planet or the people who help create it.</p>
+              <p>Our commitment to sustainability is an ongoing journey. We're constantly evaluating our practices, seeking out more responsible materials, and finding ways to reduce our environmental footprint while maximizing our positive social impact.</p>
+              <p>We believe in transparency and accountability. That's why we're sharing our sustainability initiatives with you—and why we welcome your feedback as we continue to improve.</p>
+            </div>
+            <div class="sustainability-image">
+              <img src="/placeholder.svg?height=400&width=500" alt="Sustainable Jewelry Making">
+            </div>
+          </div>
+        </div>
+        
+        <!-- Materials Section -->
+        <div class="sustainability-section materials-section">
+          <h2 class="section-title">Responsible Materials</h2>
+          
+          <div class="materials-grid">
+            <div class="material-card">
+              <div class="material-icon">
+                <i class="fas fa-recycle"></i>
+              </div>
+              <h3>Recycled Metals</h3>
+              <p>We use 100% recycled gold and silver in our jewelry, reducing the need for environmentally damaging mining practices while maintaining the highest quality standards.</p>
+              <p>Our recycled metals come from post-consumer sources like old jewelry and industrial scrap, which are refined back to their pure form.</p>
+            </div>
+            
+            <div class="material-card">
+              <div class="material-icon">
+                <i class="fas fa-gem"></i>
+              </div>
+              <h3>Ethical Gemstones</h3>
+              <p>We carefully source our gemstones from suppliers who adhere to responsible mining practices and fair labor standards.</p>
+              <p>For colored gemstones, we prioritize stones that are traceable to their source and mined with minimal environmental impact. When possible, we use lab-grown alternatives that offer the same beauty without the mining footprint.</p>
+            </div>
+            
+            <div class="material-card">
+              <div class="material-icon">
+                <i class="fas fa-seedling"></i>
+              </div>
+              <h3>Sustainable Packaging</h3>
+              <p>Our packaging is made from FSC-certified recycled paper and cardboard, printed with soy-based inks, and designed to be either recyclable or biodegradable.</p>
+              <p>We've eliminated plastic from our packaging and shipping materials, using innovative alternatives like compostable mailers and plant-based cushioning.</p>
+            </div>
+            
+            <div class="material-card">
+              <div class="material-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <h3>Certifications</h3>
+              <p>We're proud to be certified by the Responsible Jewellery Council (RJC), which holds us to rigorous standards for responsible business practices.</p>
+              <p>Our diamonds are certified by the Kimberley Process, ensuring they are conflict-free, and we're working toward full traceability for all our materials.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Production Section -->
+        <div class="sustainability-section production-section">
+          <div class="sustainability-grid reverse">
+            <div class="sustainability-image">
+              <img src="/placeholder.svg?height=400&width=500" alt="Sustainable Production">
+            </div>
+            <div class="sustainability-content">
+              <h2>Sustainable Production</h2>
+              <p>Our commitment to sustainability extends to how we make our jewelry:</p>
+              
+              <ul class="sustainability-list">
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span><strong>Energy Efficiency:</strong> Our studio is powered by 100% renewable energy, and we've invested in energy-efficient equipment and lighting.</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span><strong>Water Conservation:</strong> We use closed-loop water systems in our production processes to minimize water usage and prevent pollution.</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span><strong>Waste Reduction:</strong> We collect and recycle metal dust and scraps, ensuring nothing is wasted. Even our polishing compounds are environmentally friendly.</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span><strong>Chemical Management:</strong> We've eliminated toxic chemicals from our processes, using safer alternatives for cleaning and finishing our jewelry.</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span><strong>Handcrafted Approach:</strong> By prioritizing handcrafting over mass production, we reduce energy consumption and create pieces that are made to last.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Social Responsibility Section -->
+        <div class="sustainability-section social-section">
+          <h2 class="section-title">Social Responsibility</h2>
+          
+          <div class="social-grid">
+            <div class="social-card">
+              <h3>Fair Labor Practices</h3>
+              <p>We provide fair wages, safe working conditions, and professional development opportunities for all our artisans. We also ensure that our suppliers adhere to these same standards.</p>
+              <p>Our team members receive comprehensive benefits, including health insurance, paid time off, and parental leave. We believe that taking care of our people is essential to creating beautiful jewelry.</p>
+            </div>
+            
+            <div class="social-card">
+              <h3>Artisan Training</h3>
+              <p>We're committed to preserving traditional jewelry-making techniques by training the next generation of artisans. Our apprenticeship program provides hands-on education in metalsmithing and gemstone setting.</p>
+              <p>We also partner with local schools to offer workshops and internships, introducing young people to the craft of jewelry making.</p>
+            </div>
+            
+            <div class="social-card">
+              <h3>Community Giving</h3>
+              <p>We donate 5% of our profits to organizations that support environmental conservation and artisan communities around the world.</p>
+              <p>Our team members receive paid time off for volunteering, and we organize regular community service events to give back to our local community.</p>
+            </div>
+            
+            <div class="social-card">
+              <h3>Diversity & Inclusion</h3>
+              <p>We're committed to creating an inclusive workplace where diversity is celebrated. We actively work to ensure our team, marketing, and designs reflect and respect people of all backgrounds.</p>
+              <p>We also partner with organizations that promote diversity in the jewelry industry, providing mentorship and opportunities to underrepresented groups.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Goals Section -->
+        <div class="sustainability-section goals-section">
+          <h2 class="section-title">Our Sustainability Goals</h2>
+          <p class="section-intro">While we're proud of our progress, we recognize that sustainability is a journey of continuous improvement. Here are the goals we're working toward:</p>
+          
+          <div class="goals-timeline">
+            <div class="goal-item">
+              <div class="goal-year">2023</div>
+              <div class="goal-content">
+                <h3>Carbon Neutrality</h3>
+                <p>Achieve carbon neutrality for our operations through a combination of emissions reductions and high-quality carbon offsets.</p>
+                <div class="goal-progress">
+                  <div class="progress-bar" style="width: 75%;">75%</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="goal-item">
+              <div class="goal-year">2024</div>
+              <div class="goal-content">
+                <h3>Full Material Traceability</h3>
+                <p>Implement full traceability for all our materials, from mine or recycling source to finished piece.</p>
+                <div class="goal-progress">
+                  <div class="progress-bar" style="width: 60%;">60%</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="goal-item">
+              <div class="goal-year">2025</div>
+              <div class="goal-content">
+                <h3>Zero Waste</h3>
+                <p>Achieve zero waste to landfill across all our operations, including our studio, offices, and retail locations.</p>
+                <div class="goal-progress">
+                  <div class="progress-bar" style="width: 40%;">40%</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="goal-item">
+              <div class="goal-year">2026</div>
+              <div class="goal-content">
+                <h3>Circular Business Model</h3>
+                <p>Implement a comprehensive take-back and recycling program for all Artisan jewelry, closing the loop on our products.</p>
+                <div class="goal-progress">
+                  <div class="progress-bar" style="width: 25%;">25%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Transparency Report Section -->
+        <div class="sustainability-section report-section">
+          <h2 class="section-title">Transparency Report</h2>
+          <p class="section-intro">We believe in being transparent about our sustainability journey—both our achievements and the challenges we face.</p>
+          
+          <div class="report-tabs">
+            <button class="report-tab active" data-tab="2022">2022 Report</button>
+            <button class="report-tab" data-tab="2021">2021 Report</button>
+            <button class="report-tab" data-tab="2020">2020 Report</button>
+          </div>
+          
+          <div class="report-content">
+            <div class="report-panel active" id="2022-panel">
+              <div class="report-highlights">
+                <h3>2022 Highlights</h3>
+                <ul class="report-list">
+                  <li>Achieved 100% recycled metals in all our jewelry</li>
+                  <li>Reduced carbon emissions by 35% compared to 2020 baseline</li>
+                  <li>Eliminated single-use plastics from our packaging and shipping</li>
+                  <li>Launched our artisan apprenticeship program with 5 participants</li>
+                  <li>Donated $50,000 to environmental and social causes</li>
+                </ul>
+              </div>
+              
+              <div class="report-challenges">
+                <h3>Challenges & Next Steps</h3>
+                <p>While we made significant progress in 2022, we still face challenges in:</p>
+                <ul class="report-list">
+                  <li>Tracing the origin of all colored gemstones</li>
+                  <li>Reducing the environmental impact of shipping</li>
+                  <li>Scaling our sustainable practices as we grow</li>
+                </ul>
+                <p>In 2023, we're focusing on these areas while continuing to build on our achievements.</p>
+              </div>
+              
+              <a href="#" class="btn btn-outline">Download Full 2022 Report (PDF)</a>
+            </div>
+            
+            <div class="report-panel" id="2021-panel">
+              <div class="report-highlights">
+                <h3>2021 Highlights</h3>
+                <ul class="report-list">
+                  <li>Switched to 80% recycled metals in our production</li>
+                  <li>Installed solar panels on our studio roof, providing 60% of our energy needs</li>
+                  <li>Redesigned packaging to reduce material use by 40%</li>
+                  <li>Implemented a comprehensive waste recycling program</li>
+                  <li>Donated $35,000 to environmental and social causes</li>
+                </ul>
+              </div>
+              
+              <div class="report-challenges">
+                <h3>Challenges & Next Steps</h3>
+                <p>In 2021, our main challenges were:</p>
+                <ul class="report-list">
+                  <li>Supply chain disruptions due to the pandemic</li>
+                  <li>Finding sustainable alternatives for all packaging components</li>
+                  <li>Balancing growth with our sustainability commitments</li>
+                </ul>
+                <p>For 2022, we set goals to address these challenges while expanding our positive impact.</p>
+              </div>
+              
+              <a href="#" class="btn btn-outline">Download Full 2021 Report (PDF)</a>
+            </div>
+            
+            <div class="report-panel" id="2020-panel">
+              <div class="report-highlights">
+                <h3>2020 Highlights</h3>
+                <ul class="report-list">
+                  <li>Conducted our first comprehensive sustainability audit</li>
+                  <li>Established baseline measurements for energy use, waste, and emissions</li>
+                  <li>Began transitioning to recycled metals</li>
+                  <li>Developed our five-year sustainability roadmap</li>
+                  <li>Donated $25,000 to COVID-19 relief and environmental causes</li>
+                </ul>
+              </div>
+              
+              <div class="report-challenges">
+                <h3>Challenges & Next Steps</h3>
+                <p>In our first year of formal sustainability reporting, we identified several areas for improvement:</p>
+                <ul class="report-list">
+                  <li>Limited visibility into our supply chain</li>
+                  <li>High energy consumption in our production processes</li>
+                  <li>Packaging that relied heavily on non-recyclable materials</li>
+                </ul>
+                <p>These findings informed our sustainability strategy for the coming years.</p>
+              </div>
+              
+              <a href="#" class="btn btn-outline">Download Full 2020 Report (PDF)</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Join Us Section -->
+        <div class="sustainability-section join-section">
+          <div class="join-content">
+            <h2>Join Us on Our Sustainability Journey</h2>
+            <p>Sustainability is a collaborative effort, and we invite you to be part of our journey:</p>
+            
+            <div class="join-actions">
+              <div class="join-action">
+                <div class="join-icon">
+                  <i class="fas fa-sync-alt"></i>
+                </div>
+                <h3>Recycle Your Jewelry</h3>
+                <p>Send us your old Artisan pieces for recycling, and receive credit toward your next purchase.</p>
+                <a href="#" class="btn btn-sm">Learn More</a>
+              </div>
+              
+              <div class="join-action">
+                <div class="join-icon">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <h3>Choose Sustainable Options</h3>
+                <p>Look for our "Eco Collection" pieces, which feature our most sustainable materials and processes.</p>
+                <a href="#" class="btn btn-sm">Shop Eco Collection</a>
+              </div>
+              
+              <div class="join-action">
+                <div class="join-icon">
+                  <i class="fas fa-comment"></i>
+                </div>
+                <h3>Share Your Feedback</h3>
+                <p>We welcome your suggestions on how we can improve our sustainability practices.</p>
+                <a href="contact-us.html" class="btn btn-sm">Contact Us</a>
+              </div>
+            </div>
+            
+            <div class="sustainability-quote">
+              <blockquote>
+                "We don't inherit the earth from our ancestors; we borrow it from our children. At Artisan, we're committed to ensuring that the beauty we create today doesn't compromise the world of tomorrow."
+              </blockquote>
+              <p class="quote-author">— Emma Chen, Founder</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (Same as index.html) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Artisan</h3>
+          <p>Handcrafted jewelry and accessories made with love and attention to detail.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+            <li><a href="jewelry-care.html">Jewelry Care</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Artisan Jewelry. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="fas fa-check-circle toast-icon"></i>
+      <div class="toast-message">
+        <h4 class="toast-title">Success</h4>
+        <p class="toast-description">Item added to cart</p>
+      </div>
+    </div>
+    <button class="toast-close"><i class="fas fa-times"></i></button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Report tab switching
+      $('.report-tab').on('click', function() {
+        const tab = $(this).data('tab');
+        
+        // Update active tab
+        $('.report-tab').removeClass('active');
+        $(this).addClass('active');
+        
+        // Show corresponding panel
+        $('.report-panel').removeClass('active');
+        $(`#${tab}-panel`).addClass('active');
+      });
+    });
+  </script>
+</body>
+</html>

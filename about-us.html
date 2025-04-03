@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Artisan</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery UI for animations -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+  <!-- Header (Same as index.html) -->
+  <header class="header">
+    <div class="container">
+      <div class="header-wrapper">
+        <div class="logo">
+          <a href="index.html">Artisan</a>
+        </div>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-search">
+          <div class="search-container">
+            <input type="search" placeholder="Search for jewelry...">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        
+        <div class="header-actions">
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <a href="wishlist.html" class="header-icon">
+            <i class="fas fa-heart"></i>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="cart.html" class="header-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="badge cart-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="header-icon">
+            <i class="fas fa-user"></i>
+          </a>
+        </div>
+        
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="container">
+        <div class="mobile-search">
+          <input type="search" placeholder="Search for jewelry...">
+          <i class="fas fa-search"></i>
+        </div>
+        
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-actions">
+          <a href="wishlist.html" class="mobile-action-item">
+            <i class="fas fa-heart"></i>
+            <span>Wishlist</span>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="mobile-action-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+        
+        <button class="theme-toggle-mobile">
+          <i class="fas fa-moon"></i>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <div class="about-hero">
+      <div class="container">
+        <div class="about-hero-content">
+          <h1>Our Story</h1>
+          <p>Handcrafted with passion, designed with purpose</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="about-container">
+        <!-- Our Story Section -->
+        <div class="about-section">
+          <div class="about-grid">
+            <div class="about-image">
+              <img src="workshop.webp" alt="Artisan Jewelry Workshop" width="200" height="100">
+            </div>
+            <div class="about-content">
+              <h2>The Artisan Journey</h2>
+              <p>Artisan was founded in 2015 by jewelry designer Emma Chen with a simple mission: to create beautiful, handcrafted jewelry that celebrates individuality and craftsmanship.</p>
+              <p>What began as a small studio in Emma's apartment has grown into a thriving business with a team of skilled artisans, but our core values remain the same. Each piece is still handcrafted with meticulous attention to detail, using traditional techniques alongside modern design sensibilities.</p>
+              <p>We believe that jewelry is more than just an accessory—it's a form of self-expression, a keepsake of special moments, and a connection to the artisan who created it. That's why we pour our hearts into every piece we make.</p>
+              
+              <div class="founder-quote">
+                <blockquote>
+                  "I started Artisan because I wanted to create jewelry with soul—pieces that tell a story and connect people to the craft behind them."
+                </blockquote>
+                <div class="founder-info">
+                  <img src="appa.jpeg" alt="Emma Chen" class="founder-image">
+                  <div>
+                    <p class="founder-name">GURUNATHAN</p>
+                    <p class="founder-title">Founder & Creative Director</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Our Values Section -->
+        <div class="about-section values-section">
+          <h2 class="section-title">Our Values</h2>
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-gem"></i>
+              </div>
+              <h3>Craftsmanship</h3>
+              <p>We honor traditional jewelry-making techniques while embracing innovation. Each piece is handcrafted with precision and care by our skilled artisans.</p>
+            </div>
+            
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <h3>Sustainability</h3>
+              <p>We're committed to ethical sourcing and sustainable practices. From recycled metals to responsible gemstone sourcing, we strive to minimize our environmental impact.</p>
+            </div>
+            
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h3>Inclusivity</h3>
+              <p>We create jewelry for everyone. Our designs celebrate diversity and individual expression, with pieces that can be treasured by people of all backgrounds.</p>
+            </div>
+            
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-hands-helping"></i>
+              </div>
+              <h3>Community</h3>
+              <p>We believe in giving back. A portion of our proceeds supports artisan communities and jewelry education programs around the world.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Our Process Section -->
+        <div class="about-section process-section">
+          <h2 class="section-title">Our Process</h2>
+          <p class="section-intro">Each Artisan piece goes through a meticulous creation process, from initial concept to final polish.</p>
+          
+          <div class="process-timeline">
+            <div class="process-step">
+              <div class="process-number">1</div>
+              <div class="process-content">
+                <h3>Design</h3>
+                <p>Our designers sketch concepts inspired by nature, architecture, and cultural motifs, refining each design until it achieves the perfect balance of beauty and wearability.</p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="process-number">2</div>
+              <div class="process-content">
+                <h3>Material Selection</h3>
+                <p>We carefully source ethically mined gemstones and recycled precious metals, selecting each material for its quality, sustainability, and beauty.</p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="process-number">3</div>
+              <div class="process-content">
+                <h3>Crafting</h3>
+                <p>Our skilled artisans use traditional techniques like lost-wax casting, filigree, and hand-forging to transform raw materials into intricate jewelry pieces.</p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="process-number">4</div>
+              <div class="process-content">
+                <h3>Finishing</h3>
+                <p>Each piece is meticulously polished, set, and inspected to ensure it meets our high standards of quality and craftsmanship before it reaches you.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Meet the Team Section -->
+        <div class="about-section team-section">
+          <h2 class="section-title">Meet Our Team</h2>
+          <p class="section-intro">Behind every Artisan piece is a team of passionate individuals dedicated to creating beautiful, meaningful jewelry.</p>
+          
+          <div class="team-grid">
+            <div class="team-member">
+              <div class="team-image">
+                <img src="appa.jpeg" alt="Emma Chen">
+              </div>
+              <h3>Emma Chen</h3>
+              <p class="team-title">Founder & Creative Director</p>
+              <p class="team-bio">With a background in fine arts and metalsmithing, Emma brings her unique vision and technical expertise to every Artisan collection.</p>
+            </div>
+            
+            <div class="team-member">
+              <div class="team-image">
+                <img src="amma.jpg" alt="VENNILA" width="200" height="200">
+              </div>
+              <h3>David Park</h3>
+              <p class="team-title">Lead Jewelry Designer</p>
+              <p class="team-bio">David combines traditional techniques with contemporary aesthetics to create pieces that are both timeless and modern.</p>
+            </div>
+            
+            <div class="team-member">
+              <div class="team-image">
+                <img src="hp.jpg" alt="Sofia Rodriguez">
+              </div>
+              <h3>Sofia Rodriguez</h3>
+              <p class="team-title">HARIPRIYA</p>
+              <p class="team-bio">With over 15 years of experience, Sofia's exceptional craftsmanship brings our most intricate designs to life.</p>
+            </div>
+            
+            <div class="team-member">
+              <div class="team-image">
+                <img src="" alt="James Wilson">
+              </div>
+              <h3>James Wilson</h3>
+              <p class="team-title">Gemologist</p>
+              <p class="team-bio">James sources our ethically mined gemstones, ensuring each stone meets our standards for quality and sustainability.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Our Studio Section -->
+        <div class="about-section studio-section">
+          <div class="about-grid reverse">
+            <div class="about-content">
+              <h2>Our Studio</h2>
+              <p>Located in the heart of New York's jewelry district, our studio is where creativity and craftsmanship come together. It's a space filled with the sounds of hammering, filing, and polishing—the soundtrack of jewelry being made by hand.</p>
+              <p>We've designed our studio to honor traditional craftsmanship while embracing modern tools and techniques. Each workstation is equipped with both centuries-old tools and cutting-edge technology, allowing our artisans to create pieces that blend the best of both worlds.</p>
+              <p>While we've grown over the years, we've maintained the intimate, collaborative atmosphere of our original workshop. Our artisans work closely together, sharing knowledge and inspiring each other to push the boundaries of their craft.</p>
+              
+              <a href="contact-us.html" class="btn">Schedule a Studio Visit</a>
+            </div>
+            <div class="about-image">
+              <img src="workshop.webp" alt="Artisan Jewelry Studio">
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonials Section -->
+        <div class="about-section testimonials-section">
+          <h2 class="section-title">What Our Customers Say</h2>
+          
+          <div class="testimonials-slider">
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>"I've been collecting Artisan pieces for years, and each one is more beautiful than the last. The craftsmanship is exceptional, and I love knowing that real people with real passion made my jewelry."</p>
+              </div>
+              <div class="testimonial-author">
+                <p class="author-name">Sarah J.</p>
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>"The custom engagement ring Artisan created for us exceeded all expectations. They took the time to understand our story and preferences, resulting in a ring that's not just beautiful but meaningful to us both."</p>
+              </div>
+              <div class="testimonial-author">
+                <p class="author-name">Michael & Olivia</p>
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>"As someone who values sustainability, I appreciate Artisan's commitment to ethical sourcing and transparent practices. Their jewelry is not only stunning but also aligns with my values."</p>
+              </div>
+              <div class="testimonial-author">
+                <p class="author-name">Elena T.</p>
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-nav">
+            <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+            <div class="testimonial-dots">
+              <span class="testimonial-dot active"></span>
+              <span class="testimonial-dot"></span>
+              <span class="testimonial-dot"></span>
+            </div>
+            <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+        
+        <!-- Join Our Journey Section -->
+        <div class="about-section cta-section">
+          <div class="cta-content">
+            <h2>Join Our Journey</h2>
+            <p>Follow us on social media for behind-the-scenes glimpses of our creative process, new collection announcements, and special offers.</p>
+            
+            <div class="social-icons large">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <div class="newsletter-signup">
+              <h3>Subscribe to Our Newsletter</h3>
+              <p>Be the first to know about new collections, special events, and exclusive offers.</p>
+              
+              <form class="newsletter-form">
+                <div class="form-row">
+                  <input type="email" placeholder="Your email address" required>
+                  <button type="submit" class="btn">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (Same as index.html) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Artisan</h3>
+          <p>Handcrafted jewelry and accessories made with love and attention to detail.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+            <li><a href="jewelry-care.html">Jewelry Care</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Artisan Jewelry. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="fas fa-check-circle toast-icon"></i>
+      <div class="toast-message">
+        <h4 class="toast-title">Success</h4>
+        <p class="toast-description">Item added to cart</p>
+      </div>
+    </div>
+    <button class="toast-close"><i class="fas fa-times"></i></button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Testimonial slider functionality
+      let currentSlide = 0;
+      const testimonials = $('.testimonial');
+      const dots = $('.testimonial-dot');
+      const totalSlides = testimonials.length;
+      
+      function showSlide(index) {
+        // Hide all testimonials
+        testimonials.removeClass('active');
+        dots.removeClass('active');
+        
+        // Show the current testimonial
+        testimonials.eq(index).addClass('active');
+        dots.eq(index).addClass('active');
+        
+        currentSlide = index;
+      }
+      
+      // Initialize first slide
+      showSlide(0);
+      
+      // Next button
+      $('.testimonial-next').on('click', function() {
+        let nextSlide = currentSlide + 1;
+        if (nextSlide >= totalSlides) {
+          nextSlide = 0;
+        }
+        showSlide(nextSlide);
+      });
+      
+      // Previous button
+      $('.testimonial-prev').on('click', function() {
+        let prevSlide = currentSlide - 1;
+        if (prevSlide < 0) {
+          prevSlide = totalSlides - 1;
+        }
+        showSlide(prevSlide);
+      });
+      
+      // Dot navigation
+      $('.testimonial-dot').on('click', function() {
+        const index = $(this).index();
+        showSlide(index);
+      });
+      
+      // Auto-advance slides every 5 seconds
+      setInterval(function() {
+        $('.testimonial-next').click();
+      }, 5000);
+      
+      // Newsletter form submission
+      $('.newsletter-form').on('submit', function(e) {
+        e.preventDefault();
+        
+        // Simulate form submission
+        const email = $(this).find('input[type="email"]').val();
+        const submitBtn = $(this).find('button[type="submit"]');
+        
+        submitBtn.html('<i class="fas fa-spinner fa-spin"></i>').prop('disabled', true);
+        
+        setTimeout(function() {
+          submitBtn.html('Subscribe').prop('disabled', false);
+          
+          // Show success message
+          showToast('Subscribed', 'Thank you for subscribing to our newsletter!');
+          
+          // Reset form
+          $('.newsletter-form')[0].reset();
+        }, 1500);
+      });
+    });
+  </script>
+</body>
+</html>

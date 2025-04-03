@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Artisan</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery UI for animations -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+  <!-- Header (Same as index.html) -->
+  <header class="header">
+    <div class="container">
+      <div class="header-wrapper">
+        <div class="logo">
+          <a href="index.html">Artisan</a>
+        </div>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-search">
+          <div class="search-container">
+            <input type="search" placeholder="Search for jewelry...">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        
+        <div class="header-actions">
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <a href="wishlist.html" class="header-icon">
+            <i class="fas fa-heart"></i>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="cart.html" class="header-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="badge cart-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="header-icon">
+            <i class="fas fa-user"></i>
+          </a>
+        </div>
+        
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="container">
+        <div class="mobile-search">
+          <input type="search" placeholder="Search for jewelry...">
+          <i class="fas fa-search"></i>
+        </div>
+        
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-actions">
+          <a href="wishlist.html" class="mobile-action-item">
+            <i class="fas fa-heart"></i>
+            <span>Wishlist</span>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="mobile-action-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+        
+        <button class="theme-toggle-mobile">
+          <i class="fas fa-moon"></i>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="page-header">
+        <h1>Frequently Asked Questions</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>FAQ</span>
+        </div>
+      </div>
+      
+      <div class="faq-container">
+        <div class="faq-search">
+          <input type="text" id="faq-search-input" placeholder="Search for questions...">
+          <i class="fas fa-search"></i>
+        </div>
+        
+        <div class="faq-categories">
+          <button class="faq-category-btn active" data-category="all">All</button>
+          <button class="faq-category-btn" data-category="orders">Orders & Shipping</button>
+          <button class="faq-category-btn" data-category="returns">Returns & Refunds</button>
+          <button class="faq-category-btn" data-category="products">Products & Care</button>
+          <button class="faq-category-btn" data-category="account">Account & Payment</button>
+        </div>
+        
+        <div class="faq-list">
+          <!-- Orders & Shipping -->
+          <div class="faq-item" data-category="orders">
+            <div class="faq-question">
+              <h3>How long does shipping take?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Standard shipping typically takes 3-5 business days within the continental US. International shipping can take 7-14 business days depending on the destination country and customs processing.</p>
+              <p>Express shipping options are available at checkout for faster delivery.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item" data-category="orders">
+            <div class="faq-question">
+              <h3>Do you ship internationally?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, we ship to most countries worldwide. International shipping rates and delivery times vary by location. Please note that customers are responsible for any customs fees or import taxes that may apply.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item" data-category="orders">
+            <div class="faq-question">
+              <h3>How can I track my order?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Once your order ships, you'll receive a confirmation email with a tracking number. You can also track your order by:</p>
+              <ul>
+                <li>Visiting our <a href="track-order.html">Track Order</a> page</li>
+                <li>Logging into your account and viewing your order history</li>
+                <li>Contacting our customer service team</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Returns & Refunds -->
+          <div class="faq-item" data-category="returns">
+            <div class="faq-question">
+              <h3>What is your return policy?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>We accept returns within 30 days of delivery for most items. Products must be in their original condition with all packaging and tags intact. Custom or personalized items cannot be returned unless there's a manufacturing defect.</p>
+              <p>For more details, please visit our <a href="shipping-returns.html">Shipping & Returns</a> page.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item" data-category="returns">
+            <div class="faq-question">
+              <h3>How do I initiate a return?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>To initiate a return:</p>
+              <ol>
+                <li>Log into your account and go to your order history</li>
+                <li>Select the order containing the item(s) you wish to return</li>
+                <li>Click "Return Items" and follow the instructions</li>
+                <li>Print the return shipping label (if applicable)</li>
+                <li>Package the item(s) securely with all original packaging</li>
+                <li>Drop off the package at the designated shipping carrier</li>
+              </ol>
+              <p>If you have any issues, please contact our customer service team for assistance.</p>
+            </div>
+          </div>
+          
+          <!-- Products & Care -->
+          <div class="faq-item" data-category="products">
+            <div class="faq-question">
+              <h3>Are your materials ethically sourced?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, we are committed to ethical sourcing practices. All our gemstones and metals come from suppliers who adhere to responsible mining practices and fair labor standards. We regularly audit our supply chain to ensure compliance with our ethical guidelines.</p>
+              <p>Learn more about our commitment to sustainability on our <a href="sustainability.html">Sustainability</a> page.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item" data-category="products">
+            <div class="faq-question">
+              <h3>How should I care for my jewelry?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Proper care will extend the life of your jewelry. Here are some general tips:</p>
+              <ul>
+                <li>Remove jewelry before showering, swimming, or exercising</li>
+                <li>Apply perfume, lotion, and hairspray before putting on jewelry</li>
+                <li>Store pieces individually to prevent scratching or tangling</li>
+                <li>Clean regularly with a soft polishing cloth</li>
+                <li>For deeper cleaning, use mild soap and warm water, then dry thoroughly</li>
+              </ul>
+              <p>For specific care instructions based on material type, please visit our <a href="jewelry-care.html">Jewelry Care</a> page.</p>
+            </div>
+          </div>
+          
+          <!-- Account & Payment -->
+          <div class="faq-item" data-category="account">
+            <div class="faq-question">
+              <h3>What payment methods do you accept?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>We accept the following payment methods:</p>
+              <ul>
+                <li>Credit/Debit Cards (Visa, Mastercard, American Express, Discover)</li>
+                <li>PayPal</li>
+                <li>Apple Pay</li>
+                <li>Google Pay</li>
+                <li>Shop Pay</li>
+              </ul>
+              <p>All transactions are secure and encrypted for your protection.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item" data-category="account">
+            <div class="faq-question">
+              <h3>How do I create an account?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Creating an account is easy:</p>
+              <ol>
+                <li>Click on the profile icon in the top right corner of the page</li>
+                <li>Select "Sign Up" from the dropdown menu</li>
+                <li>Enter your email address and create a password</li>
+                <li>Fill in your personal information</li>
+                <li>Click "Create Account"</li>
+              </ol>
+              <p>You can also create an account during the checkout process.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (Same as index.html) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Artisan</h3>
+          <p>Handcrafted jewelry and accessories made with love and attention to detail.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+            <li><a href="jewelry-care.html">Jewelry Care</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Artisan Jewelry. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="fas fa-check-circle toast-icon"></i>
+      <div class="toast-message">
+        <h4 class="toast-title">Success</h4>
+        <p class="toast-description">Item added to cart</p>
+      </div>
+    </div>
+    <button class="toast-close"><i class="fas fa-times"></i></button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function() {
+      // FAQ accordion functionality
+      $('.faq-question').on('click', function() {
+        const answer = $(this).next('.faq-answer');
+        const icon = $(this).find('i');
+        
+        if (answer.is(':visible')) {
+          answer.slideUp(300);
+          icon.removeClass('fa-chevron-up').addClass('fa-chevron-down');
+        } else {
+          answer.slideDown(300);
+          icon.removeClass('fa-chevron-down').addClass('fa-chevron-up');
+        }
+      });
+      
+      // FAQ category filtering
+      $('.faq-category-btn').on('click', function() {
+        const category = $(this).data('category');
+        
+        $('.faq-category-btn').removeClass('active');
+        $(this).addClass('active');
+        
+        if (category === 'all') {
+          $('.faq-item').show();
+        } else {
+          $('.faq-item').hide();
+          $(`.faq-item[data-category="${category}"]`).show();
+        }
+      });
+      
+      // FAQ search functionality
+      $('#faq-search-input').on('input', function() {
+        const searchTerm = $(this).val().toLowerCase();
+        
+        if (searchTerm.length > 2) {
+          $('.faq-item').each(function() {
+            const questionText = $(this).find('.faq-question h3').text().toLowerCase();
+            const answerText = $(this).find('.faq-answer').text().toLowerCase();
+            
+            if (questionText.includes(searchTerm) || answerText.includes(searchTerm)) {
+              $(this).show();
+              
+              // Expand the answer if it matches
+              if (answerText.includes(searchTerm)) {
+                const answer = $(this).find('.faq-answer');
+                const icon = $(this).find('.faq-question i');
+                
+                answer.slideDown(300);
+                icon.removeClass('fa-chevron-down').addClass('fa-chevron-up');
+              }
+            } else {
+              $(this).hide();
+            }
+          });
+          
+          // Reset category buttons
+          $('.faq-category-btn').removeClass('active');
+          $('.faq-category-btn[data-category="all"]').addClass('active');
+        } else if (searchTerm.length === 0) {
+          // If search is cleared, show all and reset category
+          $('.faq-item').show();
+          $('.faq-category-btn').removeClass('active');
+          $('.faq-category-btn[data-category="all"]').addClass('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

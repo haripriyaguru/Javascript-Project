@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jewelry Care - Artisan</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery UI for animations -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+  <!-- Header (Same as index.html) -->
+  <header class="header">
+    <div class="container">
+      <div class="header-wrapper">
+        <div class="logo">
+          <a href="index.html">Artisan</a>
+        </div>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-search">
+          <div class="search-container">
+            <input type="search" placeholder="Search for jewelry...">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        
+        <div class="header-actions">
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <a href="wishlist.html" class="header-icon">
+            <i class="fas fa-heart"></i>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="cart.html" class="header-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="badge cart-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="header-icon">
+            <i class="fas fa-user"></i>
+          </a>
+        </div>
+        
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="container">
+        <div class="mobile-search">
+          <input type="search" placeholder="Search for jewelry...">
+          <i class="fas fa-search"></i>
+        </div>
+        
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-actions">
+          <a href="wishlist.html" class="mobile-action-item">
+            <i class="fas fa-heart"></i>
+            <span>Wishlist</span>
+            <span class="badge wishlist-count">0</span>
+          </a>
+          
+          <a href="profile.html" class="mobile-action-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+        
+        <button class="theme-toggle-mobile">
+          <i class="fas fa-moon"></i>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="page-header">
+        <h1>Jewelry Care Guide</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Jewelry Care</span>
+        </div>
+      </div>
+      
+      <div class="care-guide-container">
+        <div class="care-intro">
+          <p>Proper care will extend the life and beauty of your jewelry. Each piece is handcrafted with care, and with a little attention, your Artisan jewelry will remain beautiful for years to come.</p>
+        </div>
+        
+        <div class="care-tabs">
+          <button class="care-tab active" data-tab="general">General Care</button>
+          <button class="care-tab" data-tab="gold">Gold Jewelry</button>
+          <button class="care-tab" data-tab="silver">Silver Jewelry</button>
+          <button class="care-tab" data-tab="gemstones">Gemstones</button>
+          <button class="care-tab" data-tab="pearls">Pearls</button>
+        </div>
+        
+        <div class="care-content">
+          <!-- General Care -->
+          <div class="care-panel active" id="general-panel">
+            <div class="care-section">
+              <h2>General Jewelry Care</h2>
+              <div class="care-grid">
+                <div class="care-image">
+                  <img src="care1.webp" alt="Jewelry Care" width="200" height="200">
+                </div>
+                <div class="care-text">
+                  <h3>Daily Care Tips</h3>
+                  <ul class="care-list">
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Always put your jewelry on last after applying makeup, perfume, and hairspray</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Remove jewelry before showering, swimming, exercising, or sleeping</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Store pieces individually in a jewelry box or pouch to prevent scratching</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Clean your jewelry regularly with a soft polishing cloth</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Avoid exposing jewelry to harsh chemicals like chlorine or cleaning products</span>
+                    </li>
+                  </ul>
+                  
+                  <h3>Storage</h3>
+                  <p>Proper storage is essential for maintaining your jewelry's condition:</p>
+                  <ul class="care-list">
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Store each piece separately to prevent tangling and scratching</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Keep jewelry in a cool, dry place away from direct sunlight</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Use anti-tarnish strips in your jewelry box to prevent oxidation</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>For necklaces, hang them or lay them flat to prevent tangling</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="care-section">
+              <h3>What to Avoid</h3>
+              <div class="avoid-grid">
+                <div class="avoid-item">
+                  <div class="avoid-icon">
+                    <i class="fas fa-swimming-pool"></i>
+                  </div>
+                  <h4>Water Exposure</h4>
+                  <p>Remove jewelry before swimming in pools, hot tubs, or the ocean. Chlorine and salt water can damage metals and loosen settings.</p>
+                </div>
+                
+                <div class="avoid-item">
+                  <div class="avoid-icon">
+                    <i class="fas fa-spray-can"></i>
+                  </div>
+                  <h4>Chemicals</h4>
+                  <p>Keep jewelry away from household cleaners, perfumes, lotions, and hairsprays, which can dull the finish and damage gemstones.</p>
+                </div>
+                
+                <div class="avoid-item">
+                  <div class="avoid-icon">
+                    <i class="fas fa-sun"></i>
+                  </div>
+                  <h4>Direct Sunlight</h4>
+                  <p>Prolonged exposure to sunlight can fade certain gemstones and damage delicate materials.</p>
+                </div>
+                
+                <div class="avoid-item">
+                  <div class="avoid-icon">
+                    <i class="fas fa-dumbbell"></i>
+                  </div>
+                  <h4>Physical Activity</h4>
+                  <p>Remove jewelry during exercise, sports, or any activity that might cause impact or excessive sweating.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Gold Jewelry -->
+          <div class="care-panel" id="gold-panel">
+            <div class="care-section">
+              <h2>Gold Jewelry Care</h2>
+              <div class="care-grid">
+                <div class="care-image">
+                  <img src="care2.webp" alt="Gold Jewelry Care" width="200" height="200">
+                </div>
+                <div class="care-text">
+                  <h3>Cleaning Gold Jewelry</h3>
+                  <p>Gold jewelry should be cleaned regularly to maintain its luster:</p>
+                  
+                  <div class="care-steps">
+                    <div class="care-step">
+                      <div class="step-number">1</div>
+                      <div class="step-content">
+                        <h4>Prepare a Cleaning Solution</h4>
+                        <p>Mix a few drops of mild dish soap with warm (not hot) water in a small bowl.</p>
+                      </div>
+                    </div>
+                    
+                    <div class="care-step">
+                      <div class="step-number">2</div>
+                      <div class="step-content">
+                        <h4>Soak the Jewelry</h4>
+                        <p>Place your gold jewelry in the solution and let it soak for 10-15 minutes.</p>
+                      </div>
+                    </div>
+                    
+                    <div class="care-step">
+                      <div class="step-number">3</div>
+                      <div class="step-content">
+                        <h4>Gentle Brushing</h4>
+                        <p>Use a soft-bristled brush (like a baby toothbrush) to gently scrub around settings and crevices.</p>
+                      </div>
+                    </div>
+                    
+                    <div class="care-step">
+                      <div class="step-number">4</div>
+                      <div class="step-content">
+                        <h4>Rinse Thoroughly</h4>
+                        <p>Rinse the jewelry under warm running water, making sure to remove all soap residue.</p>
+                      </div>
+                    </div>
+                    
+                    <div class="care-step">
+                      <div class="step-number">5</div>
+                      <div class="step-content">
+                        <h4>Dry Completely</h4>
+                        <p>Pat dry with a soft, lint-free cloth and allow to air dry completely before storing.</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="care-note">
+                    <p><strong>Note:</strong> For gold jewelry with gemstones, check the gemstone care instructions as well, as some stones require special care.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="care-section">
+              <h3>Gold Types and Special Considerations</h3>
+              <div class="care-types-grid">
+                <div class="care-type">
+                  <h4>14K & 18K Gold</h4>
+                  <p>Higher karat gold is softer and more susceptible to scratching. Store these pieces separately and handle with extra care.</p>
+                </div>
+                
+                <div class="care-type">
+                  <h4>Gold Vermeil</h4>
+                  <p>Gold vermeil is gold-plated silver. Clean with mild soap and water only, and avoid abrasive materials that could remove the gold layer.</p>
+                </div>
+                
+                <div class="care-type">
+                  <h4>Gold-Filled</h4>
+                  <p>Gold-filled jewelry has a thicker layer of gold than gold-plated pieces. Clean gently with mild soap and water, and dry thoroughly.</p>
+                </div>
+                
+                <div class="care-type">
+                  <h4>Rose Gold</h4>
+                  <p>The copper in rose gold can tarnish over time. Clean regularly and store in anti-tarnish bags or with anti-tarnish strips.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Silver Jewelry -->
+          <div class="care-panel" id="silver-panel">
+            <div class="care-section">
+              <h2>Silver Jewelry Care</h2>
+              <div class="care-grid">
+                <div class="care-image">
+                  <img src="care3.png" alt="Silver Jewelry Care" width="200" height="200">
+                </div>
+                <div class="care-text">
+                  <h3>Preventing Tarnish</h3>
+                  <p>Sterling silver naturally tarnishes when exposed to air and certain substances. To prevent tarnish:</p>
+                  <ul class="care-list">
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Store silver jewelry in anti-tarnish bags or cloth</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Keep silver in a cool, dry place away from direct sunlight</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Wear your silver jewelry regularly—natural oils in your skin help prevent tarnish</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Remove silver jewelry before swimming, bathing, or using household cleaners</span>
+                    </li>
+                  </ul>
+                  
+                  <h3>Cleaning Tarnished Silver</h3>
+                  <p>If your silver jewelry has already tarnished, here's how to clean it:</p>
+                  
+                  <div class="care-steps">
+                    <div class="care-step">
+                      <div class="step-number">1</div>
+                      <div class="step-content">
+                        <h4>Silver Polishing Cloth</h4>
+                        <p>Use a silver polishing cloth specifically designed for jewelry. Gently rub the tarnished areas until the tarnish is removed.</p>
+                      </div>
+                    </div>
+                    
+                    <div class="care-step">
+                      <div class="step-number">2</div>
+                      <div class="step-content">
+                        <h4>Mild Soap Method</h4>
+                        <p>For light tarnish, mix mild dish soap with warm water, soak for a few minutes, then gently scrub with a soft brush.</p>
+                      </div>
+                    </div>
+                    
+                    <div class="care-step">
+                      <div class="step-number">3</div>
+                      <div class="step-content">
+                        <h4>Baking Soda Paste</h4>
+                        <p>For stubborn tarnish, make a paste with baking soda and water. Apply gently with a soft cloth, rinse thoroughly, and dry.</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="care-note">
+                    <p><strong>Caution:</strong> Do not use silver dips or harsh chemical cleaners on silver jewelry with gemstones, pearls, or oxidized/antiqued finishes, as these can damage these elements.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Gemstones -->
+          <div class="care-panel" id="gemstones-panel">
+            <div class="care-section">
+              <h2>Gemstone Care</h2>
+              <div class="care-grid">
+                <div class="care-image">
+                  <img src="care4.jpg" alt="Gemstone Care">
+                </div>
+                <div class="care-text">
+                  <h3>General Gemstone Care</h3>
+                  <p>Different gemstones require different care, but here are some general guidelines:</p>
+                  <ul class="care-list">
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Clean gemstone jewelry with a soft brush and mild soap in warm water</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Avoid ultrasonic cleaners unless you're certain your gemstone is safe for this method</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Protect gemstones from sharp blows, harsh chemicals, and extreme temperature changes</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Check settings regularly to ensure stones are secure</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="care-section">
+              <h3>Specific Gemstone Care</h3>
+              <div class="gemstone-grid">
+                <div class="gemstone-card">
+                  <h4>Diamonds</h4>
+                  <p><strong>Hardness:</strong> 10 (Mohs scale)</p>
+                  <p>While diamonds are extremely hard, they can still chip if hit at the right angle. Clean with mild soap and water, or a solution of ammonia and water (1:6 ratio).</p>
+                </div>
+                
+                <div class="gemstone-card">
+                  <h4>Sapphires & Rubies</h4>
+                  <p><strong>Hardness:</strong> 9 (Mohs scale)</p>
+                  <p>Durable and suitable for everyday wear. Clean with mild soap and water. Avoid exposing to high heat, which can alter color.</p>
+                </div>
+                
+                <div class="gemstone-card">
+                  <h4>Emeralds</h4>
+                  <p><strong>Hardness:</strong> 7.5-8 (Mohs scale)</p>
+                  <p>Emeralds often have inclusions and can be brittle. Clean gently with mild soap and lukewarm water. Avoid ultrasonic cleaners and harsh chemicals.</p>
+                </div>
+                
+                <div class="gemstone-card">
+                  <h4>Opals</h4>
+                  <p><strong>Hardness:</strong> 5.5-6.5 (Mohs scale)</p>
+                  <p>Opals contain water and can crack if they dry out. Clean with a damp cloth only. Avoid heat, harsh chemicals, and ultrasonic cleaners.</p>
+                </div>
+                
+                <div class="gemstone-card">
+                  <h4>Turquoise</h4>
+                  <p><strong>Hardness:</strong> 5-6 (Mohs scale)</p>
+                  <p>Porous and can absorb oils and chemicals. Clean with a soft, damp cloth only. Avoid water, soap, and all chemicals.</p>
+                </div>
+                
+                <div class="gemstone-card">
+                  <h4>Amethyst & Quartz</h4>
+                  <p><strong>Hardness:</strong> 7 (Mohs scale)</p>
+                  <p>Relatively durable. Clean with mild soap and water. Prolonged sun exposure can fade amethyst's color over time.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pearls -->
+          <div class="care-panel" id="pearls-panel">
+            <div class="care-section">
+              <h2>Pearl Care</h2>
+              <div class="care-grid">
+                <div class="care-image">
+                  <img src="care5.jpg" alt="Pearl Care">
+                </div>
+                <div class="care-text">
+                  <h3>Special Care for Pearls</h3>
+                  <p>Pearls are organic gems that require special care:</p>
+                  <ul class="care-list">
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Pearls should be the last thing you put on and the first thing you take off</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Wipe pearls with a soft, damp cloth after wearing to remove oils and perspiration</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Store pearls separately from other jewelry to prevent scratches</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Never use ultrasonic cleaners, steamers, or jewelry dips on pearls</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>Restring pearl necklaces every few years if worn regularly</span>
+                    </li>
+                  </ul>
+                  
+                  <h3>Cleaning Pearls</h3>
+                  <p>For deeper cleaning when necessary:</p>
+                  <ol>
+                    <li>Mix a solution of lukewarm water with a small drop of mild, phosphate-free soap</li>
+                    <li>Dip a soft cloth in the solution and gently wipe each pearl</li>
+                    <li>Rinse the cloth in clean water and wipe the pearls again to remove soap residue</li>
+                    <li>Lay the pearl jewelry flat on a soft towel to dry completely before storing</li>
+                  </ol>
+                  
+                  <div class="care-note">
+                    <p><strong>Important:</strong> Never soak pearls in water or any cleaning solution, as this can weaken the silk thread. Avoid all chemicals, including perfume, hairspray, and cosmetics, which can damage the pearl's nacre.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="care-services">
+          <h2>Professional Jewelry Services</h2>
+          <p>For the best care of your fine jewelry, we recommend professional cleaning and inspection at least once a year. Our services include:</p>
+          
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-sparkles"></i>
+              </div>
+              <h3>Professional Cleaning</h3>
+              <p>Our expert jewelers will clean your pieces using professional equipment and techniques to restore their original brilliance.</p>
+            </div>
+            
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-magnifying-glass"></i>
+              </div>
+              <h3>Inspection & Maintenance</h3>
+              <p>We'll check for loose stones, worn prongs, and other potential issues to prevent loss or damage.</p>
+            </div>
+            
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-gem"></i>
+              </div>
+              <h3>Repair Services</h3>
+              <p>From chain repairs to stone replacement, our skilled craftspeople can restore your treasured pieces.</p>
+            </div>
+            
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-arrows-rotate"></i>
+              </div>
+              <h3>Restringing</h3>
+              <p>We offer professional restringing services for pearl necklaces and bracelets to ensure their longevity.</p>
+            </div>
+          </div>
+          
+          <a href="contact-us.html" class="btn">Contact Us About Our Services</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (Same as index.html) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Artisan</h3>
+          <p>Handcrafted jewelry and accessories made with love and attention to detail.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="category.html?category=earrings">Earrings</a></li>
+            <li><a href="category.html?category=necklaces">Necklaces</a></li>
+            <li><a href="category.html?category=bracelets">Bracelets</a></li>
+            <li><a href="category.html?category=rings">Rings</a></li>
+            <li><a href="category.html?category=hair-accessories">Hair Accessories</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+            <li><a href="jewelry-care.html">Jewelry Care</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Artisan Jewelry. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="fas fa-check-circle toast-icon"></i>
+      <div class="toast-message">
+        <h4 class="toast-title">Success</h4>
+        <p class="toast-description">Item added to cart</p>
+      </div>
+    </div>
+    <button class="toast-close"><i class="fas fa-times"></i></button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Tab switching
+      $('.care-tab').on('click', function() {
+        const tab = $(this).data('tab');
+        
+        // Update active tab
+        $('.care-tab').removeClass('active');
+        $(this).addClass('active');
+        
+        // Show corresponding panel
+        $('.care-panel').removeClass('active');
+        $(`#${tab}-panel`).addClass('active');
+        
+        // Update URL hash
+        window.location.hash = tab;
+      });
+      
+      // Check for hash in URL
+      if (window.location.hash) {
+        const hash = window.location.hash.substring(1);
+        if (['general', 'gold', 'silver', 'gemstones', 'pearls'].includes(hash)) {
+          $(`.care-tab[data-tab="${hash}"]`).click();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

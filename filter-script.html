@@ -1,0 +1,128 @@
+<script>
+  $(document).ready(function() {
+    // Filter toggle functionality
+    $('.filter-toggle').on('click', function() {
+      const filterContent = $(this).closest('.filter-group').find('.filter-content');
+      const icon = $(this).find('i');
+      
+      filterContent.slideToggle(300);
+      icon.toggleClass('fa-chevron-down fa-chevron-up');
+    });
+    
+    // Clear all filters
+    $('.clear-filters-btn').on('click', function() {
+      // Reset checkboxes
+      $('input[type="checkbox"]').prop('checked', false);
+      
+      // Reset price range
+      $('#min-price').val(0);
+      $('#max-price').val(500);
+      $('#price-range-min').val(0);
+      $('#price-range-max').val(500);
+      updatePriceRangeSlider();
+      
+      // Trigger filter update
+      applyFilters();
+    });
+    
+    // Price range slider functionality
+    const minPriceInput = $('#min-price');
+    const maxPriceInput = $('#max-price');
+    const minSlider = $('#price-range-min');
+    const maxSlider = $('#price-range-max');
+    
+    // Update slider when inputs change
+    minPriceInput.on('input', function() {
+      minSlider.val($(this).val());
+      updatePriceRangeSlider();
+    });
+    
+    maxPriceInput.on('input', function() {
+      maxSlider.val($(this).val());
+      updatePriceRangeSlider();
+    });
+    
+    // Update inputs when sliders change
+    minSlider.on('input', function() {
+      minPriceInput.val($(this).val());
+      updatePriceRangeSlider();
+    });
+    
+    maxSlider.on('input', function() {
+      maxPriceInput.val($(this).val());
+      updatePriceRangeSlider();
+    });
+    
+    function updatePriceRangeSlider() {
+      const minVal = parseInt(minSlider.val());
+      const maxVal = parseInt(maxSlider.val());
+      
+      // Ensure min doesn't exceed max
+      if (minVal > maxVal) {
+        minPriceInput.val(maxVal);
+        minSlider.val(maxVal);
+      }
+      
+      // Update slider track
+      const percent1 = (minVal / 500) * 100;
+      const percent2 = (maxVal / 500) * 100;
+      $('.slider-track').css({
+        'background': `linear-gradient(to right, #e0e0e0 ${percent1}%, var(--primary-color) ${percent1}%, var(--primary-color) ${percent2}%, #e0e0e0 ${percent2}%)`
+      });
+    }
+    
+    // Initialize slider
+    updatePriceRangeSlider();
+    
+    // Apply filters button
+    $('.filter-actions .btn').on('click', function() {
+      applyFilters();
+    });
+    
+    function applyFilters() {
+      // Get selected filters
+      const minPrice = parseInt(minPriceInput.val());
+      const maxPrice = parseInt(maxPriceInput.val());
+      
+      const selectedMaterials = [];
+      $('input[name="material"]:checked').each(function() {
+        selectedMaterials.push($(this).val());
+      });
+      
+      const selectedGemstones = [];
+      $('input[name="gemstone"]:checked').each(function() {
+        selectedGemstones.push($(this).val());
+      });
+      
+      const selectedStyles = [];
+      $('input[name="style"]:checked').each(function() {
+        selectedStyles.push($(this).val());
+      });
+      
+      // In a real implementation, this would filter products
+      // For demo purposes, just show a toast with selected filters
+      let filterMessage = `Filters applied: Price $${minPrice}-$${maxPrice}`;
+      
+      if (selectedMaterials.length > 0) {
+        filterMessage += `, Materials: ${selectedMaterials.join(', ')}`;
+      }
+      
+      if (selectedGemstones.length > 0) {
+        filterMessage += `, Gemstones: ${selectedGemstones.join(', ')}`;
+      }
+      
+      if (selectedStyles.length > 0) {
+        filterMessage += `, Styles: ${selectedStyles.join(', ')}`;
+      }
+      
+      showToast('Filters Applied', filterMessage);
+      
+      // Simulate loading
+      $('.product-grid').addClass('loading');
+      
+      setTimeout(function() {
+        $('.product-grid').removeClass('loading');
+      }, 1000);
+    }
+  });
+</script>
